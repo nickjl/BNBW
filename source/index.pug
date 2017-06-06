@@ -1,1 +1,106 @@
+extends views/layout
 
+
+mixin bingoCard (image, title)
+    .offer-card.px-2.my-5.g1__s2
+        .d-flex.flex-row.offer-card__top.mb-2
+            .d-flex.c1.justify-content-center
+                img.mx-3(src="/assets/images/sampleLogo/" + image + ".jpg")
+            .d-flex.flex-column.c2.px-md-2
+                h2= title
+                span 3.5/5
+                a.font-italic(href="") Nektan
+        .d-flex.c2.ml-auto.mb-3.px-2
+            p Ghost Bingo is a Cozy bingo site on the Best Bingo Network, with all the usual network promotions and huge bonuses
+                a.ml-2(href="") read more...
+        .offer-card__strip.p-2
+            span £100 Deposit & 500% Bingo Bonus + 50 Free Spins
+        .d-flex.flex-column.offer-card__bottom.px-2.py-4
+            ul.list-unstyled
+                li Deposit £10 play with £40
+                li Deposit £10 play with £40
+                li Deposit £10 play with £40
+                li Deposit £10 play with £40
+            div
+                a.play-now(href="") Play Now
+                a(href="") Read Review
+            p.mt-4.mb-0.small.text-center.font-italic New players only. T&C's including wagering requirements apply
+
+
+block content
+    section.intro
+        .d-flex.flex-column.flex-lg-row.g1
+            .c1.d-flex.justify-content-center
+                .p-2
+                    h2 2017 New Bingo Sites
+                    ul.list-unstyled
+                        li.py-1 The best new bingo sites from the last 12 months
+                        li.py-1 Big deposit and no deposit bonus offers
+                        li.py-1 Exclusive bingo rooms and promotions
+                        li.py-1 All UK regulated
+
+            .c2.offers
+                .px-4
+                    h3 REGISTER to receive updates via email
+                    .offer-table.p-2.p-md-4
+                        table.table
+                            thead
+                                tr
+                                    th Site
+                                    th Offer
+                            tbody
+                                tr
+                                    td Good Day Bingo
+                                    td £10 No deposit & 500% Bingo Bonus
+                                tr
+                                    td Fabulous Bingo
+                                    td Deposit £10 play with £40
+                                tr
+                                    td Bid Bingo
+                                    td £70 Free Bingo Tickets, No Wagering Requirement
+                                tr
+                                    td Bid Bingo
+                                    td £70 Free Bingo Tickets, No Wagering Requirement
+                                tr
+                                    td Bid Bingo
+                                    td £70 Free Bingo Tickets, No Wagering Requirement
+                        p.text-center.mb-0 * New players only. T&C's including wagering requirements apply.
+
+    section
+        .d-flex.flex-column.flex-lg-row.g1
+            .offer-summary.c1.px-2.px-sm-4
+                .content-container
+                    h2.title-underline NEW BINGO SITES
+                    +bingoCard("chitChat", "Chit Chat Bingo")
+                    +bingoCard("coralBingo", "Coral Bingo")
+                    +bingoCard("fabulous", "Fabulous Bingo")
+                    +bingoCard("iconic", "Iconic Bingo")
+            .c2
+                .intro-content.px-2.px-sm-4.pb-4
+                    .content-container
+                        h2.title-underline.mb-4 WELCOME TO BEST NEW BINGO SITES
+                        p.
+                            As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
+                            Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
+                            the setup cost is greater for the operator.
+                        h2.title-underline.my-4 FIND YOUR BINGO SITES 2017!
+                        p.
+                            As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
+                            Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
+                            the setup cost is greater for the operator.
+                .intro-news.p-2.p-sm-4
+                    .content-container
+                        h2.title-underline.my-4 LATEST BINGO ARTICLES OF 2017
+                        p.
+                            As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
+                            Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
+                            the setup cost is greater for the operator.
+                        .d-flex.flex-column
+                            a(href="") Can you really win a million pounds playing bingo?
+                            a(href="") A guide to online bingo variants
+                            a(href="") Bingo loyalty and VIP schemes
+                            a(href="") Free bingo - is it too good to be true?
+                            a(href="") The worst bingo promotions ever
+                            a(href="") Online bingo - is it fixed?
+                            a(href="") Wagering requirements explained
+                            a(href="") 2016 - the year in bingo

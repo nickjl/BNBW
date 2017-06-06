@@ -1,0 +1,36 @@
+@include media-breakpoint-up(lg) {
+
+  $s1: 40%;
+  $s2: 30%;
+
+  .g1 {
+    .c1 {
+      width: 50%;
+    }
+    .c2 {
+      width: 50%;
+    }
+
+    &__s1 {
+      .c1 {
+        width: $s1;
+      }
+      .c2 {
+        width: 100% - $s1;
+      }
+
+    }
+
+    &__s2 {
+      .c1 {
+        width: $s2;
+      }
+      .c2 {
+        width: 100% - $s2;
+      }
+
+    }
+  }
+
+}
+
