@@ -2,7 +2,7 @@ extends views/layout
 
 
 mixin bingoCard (image, title)
-    .offer-card.px-2.my-5.g1__s2
+    .offer-card.my-5.g1__s2
         .d-flex.flex-row.offer-card__top.mb-2
             .d-flex.c1.justify-content-center
                 img.mx-3(src="/assets/images/sampleLogo/" + image + ".jpg")
@@ -13,8 +13,10 @@ mixin bingoCard (image, title)
         .d-flex.c2.ml-auto.mb-3.px-2
             p Ghost Bingo is a Cozy bingo site on the Best Bingo Network, with all the usual network promotions and huge bonuses
                 a.ml-2(href="") read more...
-        .offer-card__strip.p-2
+        .offer-card__strip.p-2.d-flex.justify-content-around.align-items-center
+            span.px-2
             span £100 Deposit & 500% Bingo Bonus + 50 Free Spins
+            span.px-2 >
         .d-flex.flex-column.offer-card__bottom.px-2.py-4
             ul.list-unstyled
                 li Deposit £10 play with £40
@@ -75,6 +77,14 @@ block content
                     +bingoCard("coralBingo", "Coral Bingo")
                     +bingoCard("fabulous", "Fabulous Bingo")
                     +bingoCard("iconic", "Iconic Bingo")
+                .content-container.subscribe-box.mb-5.p-4.hidden-md-down
+                    .d-flex.align-items-center.flex-column
+                        h2 Get £1000 in bonus offers
+                        input.subscribe-box__email(type="email", placeholder="Enter your email")
+                        label
+                            input(type="checkbox")
+                            | I have read the
+                            a.pl-1.font-italic(href="") Terms & Conditions
             .c2
                 .intro-content.px-2.px-sm-4.pb-4
                     .content-container
@@ -95,12 +105,34 @@ block content
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
+                        a.play-now.ml-0(href="") View all news
                         .d-flex.flex-column
-                            a(href="") Can you really win a million pounds playing bingo?
-                            a(href="") A guide to online bingo variants
-                            a(href="") Bingo loyalty and VIP schemes
-                            a(href="") Free bingo - is it too good to be true?
-                            a(href="") The worst bingo promotions ever
-                            a(href="") Online bingo - is it fixed?
-                            a(href="") Wagering requirements explained
-                            a(href="") 2016 - the year in bingo
+                            ul.list-unstyled.my-4
+                                li
+                                    a(href="") Can you really win a million pounds playing bingo?
+                                li
+                                    a(href="") A guide to online bingo variants
+                                li
+                                    a(href="") Bingo loyalty and VIP schemes
+                                li
+                                    a(href="") Free bingo - is it too good to be true?
+                                li
+                                    a(href="") The worst bingo promotions ever
+                                li
+                                    a(href="") Online bingo - is it fixed?
+                                li
+                                    a(href="") Wagering requirements explained
+                                li
+                                    a(href="") 2016 - the year in bingo
+
+
+    section.content-container.subscribe-box.mb-5.p-4
+        .d-flex.align-items-center.flex-row.g1__s1
+            .c2.d-flex.justify-content-center
+                h2 Get £1000 in bonus offers
+            .c1.d-flex.flex-column.align-items-center
+                input.subscribe-box__email(type="email", placeholder="Enter your email")
+                label
+                    input(type="checkbox")
+                    | I have read the
+                    a.pl-1.font-italic(href="") Terms & Conditions

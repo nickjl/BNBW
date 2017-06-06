@@ -12,6 +12,14 @@ h2 {
   padding: 3rem 0 5rem 0;
   background: url("/assets/images/headStars.jpg") no-repeat;
   background-size: cover;
+
+
+  li {
+    background: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png') no-repeat;
+    padding-left: 30px;
+  }
+
+
 }
 
 .offers {
@@ -57,6 +65,29 @@ h2 {
   background: $theme-color-2;
 }
 
+a {
+  color: $theme-color-2;
+  text-decoration: underline;
+}
+
+a.play-now {
+  color: #ffffff;
+  background: $theme-color-2;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 15px;
+}
+
+a.play-now:hover {
+
+}
+
+li {
+  background: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png') no-repeat;
+  padding-left: 30px;
+}
+
 
 .offer-card {
   color: grey;
@@ -72,31 +103,17 @@ h2 {
     color: $theme-color-2;
   }
 
-  a {
-    color: $theme-color-2;
-    text-decoration: underline;
-  }
 
-  a.play-now {
-    color: #ffffff;
-    background: $theme-color-2;
-    border-radius: 20px;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 15px;
-  }
-
-  a.play-now:hover {
-
-  }
 
   ul {
-    //display: inline-flex;
-    //flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
 
     li {
       color: $theme-color-2;
     }
+
+
   }
 
 
@@ -131,16 +148,33 @@ h2 {
   }
 }
 
-.intro-news {
-  background: lighten($theme-color-1, 40%);
+.subscribe-box {
+  background: $theme-color-1;
+  border-top: 8px solid $theme-color-2;
+
+  h2 {
+    color: #ffffff;
+  }
+
+  &__email, label {
+    width: 90%;
+  }
 }
 
-@include media-breakpoint-up(md) {
+.intro-news {
+  background: lighten($theme-color-1, 40%);
 
-  .content-container {
-      width: 80%;
-      margin: auto;
+  li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+    }
   }
+}
+
+@include media-breakpoint-up(sm) {
 
   .offer-card {
     ul {
@@ -151,5 +185,13 @@ h2 {
         width: 50%;
       }
     }
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+  .content-container {
+      width: 80%;
+      margin: auto;
   }
 }
