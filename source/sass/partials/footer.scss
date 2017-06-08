@@ -1,0 +1,122 @@
+
+
+.subscribe-box {
+  background: $theme-color-1;
+  border-top: 8px solid lighten($theme-color-2,20%);
+  position: relative;
+
+  h2 {
+    color: #ffffff;
+  }
+
+  &__email {
+    margin: 7px auto;
+    padding: 5px;
+
+  }
+
+  label {
+    margin: 7px auto;
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  .terms-conditions {
+    font-size: 0.8rem;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
+  .btn-send {
+    color: #ffffff;
+    background: lighten($theme-color-2,20%);
+    border-radius: 20px;
+    margin-bottom: -42px;
+    padding: 8px 30px;
+  }
+}
+
+.footer-sites {
+  padding-top: 8rem;
+  margin-top: -4rem;
+  padding-bottom: 4rem;
+  background: $theme-color-2;
+  color: $grey;
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  a, a:hover {
+    text-decoration: none;
+    font-size: 1rem;
+    color: $grey;
+  }
+
+  img {
+    max-height: 60px;
+    max-width:  60px;
+    border-radius: 100%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:         transform .8s ease-in-out;
+  }
+
+  img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.about-us {
+  color: $theme-color-2;
+  background: lighten($theme-color-2, 75%);
+
+  a, a:hover {
+    color: lighten($theme-color-2,20%);
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+
+.legal-logos {
+  color: $theme-color-2;
+
+  a {
+    margin: 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
+
+.footer-underline {
+  border-top: 6px solid $theme-color-2;
+}
+
+.footer-logo {
+  height: 80px;
+}
+
+
+@include media-breakpoint-up(md) {
+  .subscribe-box {
+    &__email, label {
+      width: 90%;
+    }
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .footer-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+

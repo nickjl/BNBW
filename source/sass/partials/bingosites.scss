@@ -1,0 +1,33 @@
+.filter-box {
+  background: $theme-color-2;
+  border-top: 10px solid $theme-color-1;
+  margin-top: -70px;
+}
+
+.bingo-card {
+  &__summary {
+    background: red;
+    width: 30%;
+
+    img {
+      border-radius: 100%;
+      max-height: 100px;
+    }
+
+  }
+
+
+  &__details {
+    background: blue;
+    width: 60%;
+
+  }
+
+  &__icons {
+    background: yellow;
+    width: 30%;
+
+  }
+
+
+}

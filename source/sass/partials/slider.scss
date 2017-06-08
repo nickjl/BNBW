@@ -1,0 +1,21 @@
+.gallery-slider {
+  margin-top: 2.5rem;
+  p {
+    color: $grey;
+  }
+
+  .screenshot {
+    background: white;
+    padding: 8px;
+  }
+}
+
+.bx-wrapper {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.bx-viewport {
+  overflow: visible !important;
+}

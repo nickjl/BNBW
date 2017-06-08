@@ -1,32 +1,7 @@
 extends views/layout
 
 
-mixin bingoCard (image, title)
-    .offer-card.my-5.g1__s2
-        .d-flex.flex-row.offer-card__top.mb-2
-            .d-flex.c1.justify-content-center
-                img.mx-3(src="/assets/images/sampleLogo/" + image + ".jpg")
-            .d-flex.flex-column.c2.px-md-2
-                h2= title
-                span 3.5/5
-                a.font-italic(href="") Nektan
-        .d-flex.c2.ml-auto.mb-3.px-2
-            p Ghost Bingo is a Cozy bingo site on the Best Bingo Network, with all the usual network promotions and huge bonuses
-                a.ml-2(href="") read more...
-        .offer-card__strip.p-2.d-flex.justify-content-around.align-items-center
-            span.px-2
-            span £100 Deposit & 500% Bingo Bonus + 50 Free Spins
-            span.px-2 >
-        .d-flex.flex-column.offer-card__bottom.px-2.py-4
-            ul.list-unstyled
-                li Deposit £10 play with £40
-                li Deposit £10 play with £40
-                li Deposit £10 play with £40
-                li Deposit £10 play with £40
-            div
-                a.play-now(href="") Play Now
-                a(href="") Read Review
-            p.mt-4.mb-0.small.text-center.font-italic New players only. T&C's including wagering requirements apply
+include views/includes/offer-card/offer-card
 
 
 block content
@@ -43,7 +18,9 @@ block content
 
             .c2.offers
                 .px-4
-                    h3 REGISTER to receive updates via email
+                    h3
+                        a.mr-2(href="#register") REGISTER
+                        | to receive updates via email
                     .offer-table.p-2.p-md-4
                         table.table
                             thead
@@ -66,13 +43,14 @@ block content
                                 tr
                                     td Bid Bingo
                                     td £70 Free Bingo Tickets, No Wagering Requirement
-                        p.text-center.mb-0 * New players only. T&C's including wagering requirements apply.
+                        p.text-center.mb-0.small * New players only. T&C's including wagering requirements apply.
 
     section
         .d-flex.flex-column.flex-lg-row.g1
             .offer-summary.c1.px-2.px-sm-4
                 .content-container
-                    h2.title-underline NEW BINGO SITES
+                    h2 NEW BINGO SITES
+                    hr.title-underline
                     +bingoCard("chitChat", "Chit Chat Bingo")
                     +bingoCard("coralBingo", "Coral Bingo")
                     +bingoCard("fabulous", "Fabulous Bingo")
@@ -81,31 +59,50 @@ block content
                     .d-flex.align-items-center.flex-column
                         h2 Get £1000 in bonus offers
                         input.subscribe-box__email(type="email", placeholder="Enter your email")
-                        label
+                        label.terms-conditions
                             input(type="checkbox")
                             | I have read the
                             a.pl-1.font-italic(href="") Terms & Conditions
+                        button.btn.btn-send(type="button") SUBMIT
             .c2
-                .intro-content.px-2.px-sm-4.pb-4
+                .intro-content.px-3.px-sm-4.pb-4
                     .content-container
-                        h2.title-underline.mb-4 WELCOME TO BEST NEW BINGO SITES
+                        h2 WELCOME TO BEST NEW BINGO SITES
+                        hr.title-underline
                         p.
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
-                        h2.title-underline.my-4 FIND YOUR BINGO SITES 2017!
+                        h2 FIND YOUR BINGO SITES 2017!
+                        hr.title-underline
                         p.
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
-                .intro-news.p-2.p-sm-4
+                .intro-news.p-3.p-sm-4
                     .content-container
-                        h2.title-underline.my-4 LATEST BINGO ARTICLES OF 2017
+                        h2 LATEST BINGO ARTICLES OF 2017
+                        hr.title-underline
                         p.
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
+                        .gallery-slider(style="visibility: hidden")
+                            .screenshot
+                                img(src="http://placekitten.com/g/400/500")
+                                p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
+                            .screenshot
+                                img(src="http://placekitten.com/g/400/500")
+                                p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
+                            .screenshot
+                                img(src="http://placekitten.com/g/400/500")
+                                p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
+                        p
+                            span#slider-prev
+                            span#slider-next
+
                         a.play-now.ml-0(href="") View all news
+
                         .d-flex.flex-column
                             ul.list-unstyled.my-4
                                 li
@@ -126,13 +123,5 @@ block content
                                     a(href="") 2016 - the year in bingo
 
 
-    section.content-container.subscribe-box.mb-5.p-4
-        .d-flex.align-items-center.flex-row.g1__s1
-            .c2.d-flex.justify-content-center
-                h2 Get £1000 in bonus offers
-            .c1.d-flex.flex-column.align-items-center
-                input.subscribe-box__email(type="email", placeholder="Enter your email")
-                label
-                    input(type="checkbox")
-                    | I have read the
-                    a.pl-1.font-italic(href="") Terms & Conditions
+
+

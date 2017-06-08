@@ -1,14 +1,122 @@
+$half: 50%;
+$s1: 40%;
+$s2: 30%;
+
+@include media-breakpoint-up(sm) {
+
+  .g1 {
+    &__footer {
+      .c1 {
+        width: $half;
+      }
+      .c2 {
+        width: $half;
+      }
+    }
+
+    &__footer-logos {
+      .c1 {
+        width: $half;
+      }
+      .c2 {
+        width: $half;
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(lg) {
+
+
+    .g1 {
+      .c1 {
+        width: $half;
+      }
+      .c2 {
+        width: $half;
+      }
+
+      &__s1 {
+        .c1 {
+          width: $s1;
+        }
+        .c2 {
+          width: 100% - $s1;
+        }
+
+      }
+
+      &__s2 {
+        .c1 {
+          width: $s2;
+        }
+        .c2 {
+          width: 100% - $s2;
+        }
+
+      }
+
+      &__footer {
+        .c1 {
+          width: $half/2;
+        }
+        .c2 {
+          width: $half/2;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+@include media-breakpoint-up(md) {
+
+  .filter {
+    .g1 {
+
+      .c1 {
+        width: $half;
+      }
+      .c2 {
+        width: $half;
+      }
+
+      &__s1 {
+        .c1 {
+          width: $s1;
+        }
+        .c2 {
+          width: 100% - $s1;
+        }
+
+      }
+
+      &__s2 {
+        .c1 {
+          width: $s2;
+        }
+        .c2 {
+          width: 100% - $s2;
+        }
+
+      }
+
+
+    }
+  }
+}
+
 @include media-breakpoint-up(lg) {
 
-  $s1: 40%;
-  $s2: 30%;
 
   .g1 {
     .c1 {
-      width: 50%;
+      width: $half;
     }
     .c2 {
-      width: 50%;
+      width: $half;
     }
 
     &__s1 {
@@ -30,7 +138,18 @@
       }
 
     }
+
+    &__footer {
+      .c1 {
+        width: $half/2;
+      }
+      .c2 {
+        width: $half/2;
+      }
+    }
   }
 
 }
+
+
 

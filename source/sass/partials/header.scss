@@ -1,5 +1,5 @@
 .navbar__logo {
-  height: 70px;
+  height: 80px;
 }
 
 .navbar {
@@ -20,6 +20,10 @@
 @include media-breakpoint-down(md) {
   g#Tag {
     display: none;
+  }
+
+  .navbar__logo {
+    height: 65px;
   }
 
 }

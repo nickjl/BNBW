@@ -1,7 +1,7 @@
 
 
 body {
-  color: white;
+  color: #ffffff;
 }
 
 h2 {
@@ -13,6 +13,13 @@ h2 {
   background: url("/assets/images/headStars.jpg") no-repeat;
   background-size: cover;
 
+  a {
+    color: #ffffff;
+  }
+
+  p {
+    color: $grey;
+  }
 
   li {
     background: url('http://css-plus.com/examples/2011/12/custom-list-style/i/tick.png') no-repeat;
@@ -30,7 +37,9 @@ h2 {
 .offer-table {
   border-top: 10px solid $theme-color-1;
   background: lighten($theme-color-1, 40%);
-  margin-bottom: -100px;
+  margin-bottom: -110px;
+  z-index: 99999;
+  position: relative;
 
   thead th {
     border: 0;
@@ -52,12 +61,15 @@ h2 {
 }
 
 .title-underline {
-  border-bottom: 8px solid $theme-color-1;
+  border-top: 8px solid $theme-color-1;
   font-size: 1.8rem;
+  margin-top: 0;
 }
 
 .offer-summary {
   padding-top: 3rem;
+  background: #ffffff;
+  z-index: 9999;
 }
 
 .intro-content {
@@ -79,7 +91,8 @@ a.play-now {
   margin: 15px;
 }
 
-a.play-now:hover {
+a:hover {
+  color: $theme-color-1;
 
 }
 
@@ -148,21 +161,11 @@ li {
   }
 }
 
-.subscribe-box {
-  background: $theme-color-1;
-  border-top: 8px solid $theme-color-2;
 
-  h2 {
-    color: #ffffff;
-  }
-
-  &__email, label {
-    width: 90%;
-  }
-}
 
 .intro-news {
   background: lighten($theme-color-1, 40%);
+  color: $theme-color-2;
 
   li {
     margin-top: 10px;
@@ -173,6 +176,7 @@ li {
     }
   }
 }
+
 
 @include media-breakpoint-up(sm) {
 
