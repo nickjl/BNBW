@@ -2,6 +2,7 @@ $half: 50%;
 $s1: 40%;
 $s2: 30%;
 
+
 @include media-breakpoint-up(sm) {
 
   .g1 {
@@ -26,7 +27,6 @@ $s2: 30%;
   }
 
   @include media-breakpoint-up(lg) {
-
 
     .g1 {
       .c1 {
@@ -73,38 +73,38 @@ $s2: 30%;
 
 @include media-breakpoint-up(md) {
 
-  .filter {
-    .g1 {
 
+  .g1-md {
+
+    .c1 {
+      width: $half;
+    }
+    .c2 {
+      width: $half;
+    }
+
+    &__s1 {
       .c1 {
-        width: $half;
+        width: $s1;
       }
       .c2 {
-        width: $half;
+        width: 100% - $s1;
       }
-
-      &__s1 {
-        .c1 {
-          width: $s1;
-        }
-        .c2 {
-          width: 100% - $s1;
-        }
-
-      }
-
-      &__s2 {
-        .c1 {
-          width: $s2;
-        }
-        .c2 {
-          width: 100% - $s2;
-        }
-
-      }
-
 
     }
+
+    &__s2 {
+      .c1 {
+        width: $s2;
+      }
+      .c2 {
+        width: 100% - $s2;
+      }
+
+    }
+
+
+
   }
 }
 

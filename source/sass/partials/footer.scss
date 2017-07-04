@@ -1,8 +1,8 @@
 
 
 .subscribe-box {
-  background: $theme-color-1;
-  border-top: 8px solid lighten($theme-color-2,20%);
+  background: $primary;
+  border-top: 8px solid $brand;
   position: relative;
 
   h2 {
@@ -12,7 +12,7 @@
   &__email {
     margin: 7px auto;
     padding: 5px;
-
+    width: 280px;
   }
 
   label {
@@ -30,9 +30,17 @@
     }
   }
 
+  input[type="checkbox"] + label span {
+    border: 2px solid #ffffff;
+  }
+
+  input[type="checkbox"]:checked + label span {
+    background:#ffffff;
+  }
+
   .btn-send {
     color: #ffffff;
-    background: lighten($theme-color-2,20%);
+    background: $brand;
     border-radius: 20px;
     margin-bottom: -42px;
     padding: 8px 30px;
@@ -43,8 +51,7 @@
   padding-top: 8rem;
   margin-top: -4rem;
   padding-bottom: 4rem;
-  background: $theme-color-2;
-  color: $grey;
+  background: darken($brand, 20%);
 
   h2 {
     font-size: 1.4rem;
@@ -53,7 +60,7 @@
   a, a:hover {
     text-decoration: none;
     font-size: 1rem;
-    color: $grey;
+    color: $txt2;
   }
 
   img {
@@ -68,14 +75,21 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+
+
+  li {
+    background: none;
+    padding-left: 0;
+  }
 }
 
 .about-us {
-  color: $theme-color-2;
-  background: lighten($theme-color-2, 75%);
+  color: desaturate(darken($brand, 12%), 40%)
+;
+  background: lighten($brand, 75%);
 
   a, a:hover {
-    color: lighten($theme-color-2,20%);
+    color: $brand;
     text-decoration: none;
     margin: 20px;
     font-size: 1rem;
@@ -85,7 +99,7 @@
 
 
 .legal-logos {
-  color: $theme-color-2;
+  color: desaturate(darken($brand, 12%), 40%);
 
   a {
     margin: 12px;
@@ -95,7 +109,7 @@
 }
 
 .footer-underline {
-  border-top: 6px solid $theme-color-2;
+  border-top: 6px solid $brand;
 }
 
 .footer-logo {
@@ -103,19 +117,19 @@
 }
 
 
-@include media-breakpoint-up(md) {
-  .subscribe-box {
-    &__email, label {
-      width: 90%;
-    }
 
-  }
-}
 
 @include media-breakpoint-up(lg) {
   .footer-container {
     width: 80%;
     margin: auto;
+  }
+
+  .subscribe-box {
+    &__email, label {
+      width: 90%;
+    }
+
   }
 }
 

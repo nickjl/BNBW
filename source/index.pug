@@ -3,12 +3,13 @@ extends views/layout
 
 include views/includes/offer-card/offer-card
 
-
+block data
+    -var template = "index"
 block content
     section.intro
         .d-flex.flex-column.flex-lg-row.g1
             .c1.d-flex.justify-content-center
-                .p-2
+                .p-3
                     h2 2017 New Bingo Sites
                     ul.list-unstyled
                         li.py-1 The best new bingo sites from the last 12 months
@@ -47,7 +48,7 @@ block content
 
     section
         .d-flex.flex-column.flex-lg-row.g1
-            .offer-summary.c1.px-2.px-sm-4
+            .offer-summary.c1
                 .content-container
                     h2 NEW BINGO SITES
                     hr.title-underline
@@ -59,27 +60,53 @@ block content
                     .d-flex.align-items-center.flex-column
                         h2 Get £1000 in bonus offers
                         input.subscribe-box__email(type="email", placeholder="Enter your email")
-                        label.terms-conditions
-                            input(type="checkbox")
+                        input#c3(type='checkbox', name='cc')
+                        label.terms-conditions(for='c3')
+                            span
                             | I have read the
                             a.pl-1.font-italic(href="") Terms & Conditions
                         button.btn.btn-send(type="button") SUBMIT
             .c2
-                .intro-content.px-3.px-sm-4.pb-4
+                .intro-content.pb-4
                     .content-container
                         h2 WELCOME TO BEST NEW BINGO SITES
                         hr.title-underline
-                        p.
+                        p.my-5.
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
                         h2 FIND YOUR BINGO SITES 2017!
                         hr.title-underline
-                        p.
+                        p.my-5.
                             As 2016 changes to 2017 we continue to see the usual steady stream of new bingo sites on the Dragonfish network and on the two Cozy networks, plus the occasional
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
-                .intro-news.p-3.p-sm-4
+                        .d-flex.flex-row.flex-wrap.justify-content-center
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#new" x="0" y="0")
+                                p New bingo sites
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#newDeposit" x="0" y="0")
+                                p No deposit bingo
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#gift" x="0" y="0")
+                                p Play free bingo
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#888" x="0" y="0")
+                                p CASSAVA bingo sites
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#payPal" x="0" y="0")
+                                p PayPal bingo sites
+                            .d-flex.flex-column.intro-content__icon
+                                svg(viewBox="0 0 110 110")
+                                    use(xlink:href="#cozy" x="0" y="0")
+                                p COZY bingo sites
+                .intro-news.py-5
                     .content-container
                         h2 LATEST BINGO ARTICLES OF 2017
                         hr.title-underline
@@ -88,18 +115,18 @@ block content
                             Jumpman powered bingo site. Playtech/Virtue Fusion launches on the other hand remain few and far between; although in our opinion the Playtech platform is superior
                             the setup cost is greater for the operator.
                         .gallery-slider(style="visibility: hidden")
-                            .screenshot
+                            a.screenshot(href="")
                                 img(src="http://placekitten.com/g/400/500")
                                 p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
-                            .screenshot
+                            a.screenshot(href="")
                                 img(src="http://placekitten.com/g/400/500")
                                 p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
-                            .screenshot
+                            a.screenshot(href="")
                                 img(src="http://placekitten.com/g/400/500")
                                 p.small.mt-3.text-center 75 ball bingo is the version that is most popular internationally.
                         p
                             span#slider-prev
-                            span#slider-next
+                            span#slider-next.ml-4
 
                         a.play-now.ml-0(href="") View all news
 

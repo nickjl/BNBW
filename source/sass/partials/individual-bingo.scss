@@ -1,0 +1,107 @@
+.bingo-site {
+  &__title {
+    color: $brand;
+    font-weight: 700;
+  }
+
+  &__offer {
+    color: $brand;
+    font-size: 1rem;
+  }
+
+  &__rating {
+    color: $primary;
+  }
+}
+
+.bingo-descrip {
+  background: darken($brand, 20%);
+
+}
+
+.bingo-summary {
+  .offer-table {
+    margin-bottom: 0;
+  }
+}
+
+.bingo-details {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .offer-title {
+    color: $brand;
+    margin-bottom: 0;
+  }
+
+  .play-now {
+    white-space: nowrap;
+    height: 45px;
+    width: 130px;
+    text-align: center;
+    margin: auto;
+
+  }
+
+  hr {
+    max-width: 600px;
+    margin-left: 0;
+  }
+}
+
+
+.pagination {
+  margin-top: 1rem;
+}
+
+.pagination li {
+  background: none;
+  padding-left: 0;
+}
+.page-link {
+  border: none;
+  color: $brand;
+  margin-left: 0;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  background: $brand;
+  color: #ffffff;
+  border-bottom: 2px solid $brand;
+
+}
+
+.page-item.active .page-link {
+  background: #ffffff;
+  color: $grey;
+  box-sizing: border-box;
+  border-bottom: 2px solid $grey;
+
+}
+
+.page-item.disabled .page-link {
+  color: $grey;
+}
+
+
+
+
+
+
+@include media-breakpoint-up(lg) {
+  .bingo-descrip {
+    margin-top: -380px;
+    margin-bottom: 50px;
+
+  }
+
+  .related-bingo {
+    .offer-card {
+      width: 45%;
+      margin: 1%;
+    }
+  }
+
+}

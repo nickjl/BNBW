@@ -1,10 +1,27 @@
 
 <nav class="navbar navbar-toggleable-md px-4">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarBNBW" aria-controls="navbarBNBW" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand mx-auto" href="index.html">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarBNBW" aria-controls="navbarBNBW" aria-expanded="false" aria-label="Toggle navigation">
+    <svg class="navbar__button" viewBox="0 0 110 110">
+      <use xlink:href="#hamburger" x="0" y="0"></use>
+    </svg>
+  </button><a class="text-center" href="index.html">
     <svg class="navbar__logo" viewBox="0 0 157 80">
       <use xlink:href="#logo" x="0" y="0"></use>
     </svg></a>
   <div class="collapse navbar-collapse" id="navbarBNBW">
-    <div class="navbar-nav mx-md-auto"><a class="nav-item nav-link active" href="index.html">HOME<span class="sr-only">(current)</span></a><a class="nav-item nav-link" href="bingosites.html">New bingo sites</a><a class="nav-item nav-link" href="#">New articles</a><a class="nav-item nav-link" href="#">Offers</a><a class="nav-item nav-link" href="#">Promotions</a><a class="nav-item nav-link" href="#">Guides</a></div>
+    <ul class="navbar-nav mx-md-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="bingosites.html">New bingo sites</a></li>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offers</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item" href="#">No deposit</a><a class="dropdown-item" href="#">Free bingo</a><a class="dropdown-item" href="#">Latest promotions</a></div>
+      </li>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarBingoSites" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bingo Sites</a>
+        <div class="dropdown-menu" aria-labelledby="navbarBingoSites"><a class="dropdown-item" href="#">Mobile bingo</a><a class="dropdown-item" href="#">Cosy bingo sites</a><a class="dropdown-item" href="#">Dragonfish bingo sites</a><a class="dropdown-item" href="#">Virtue fusion bingo sites</a><a class="dropdown-item" href="#">Payment methods</a><a class="dropdown-item" href="#">Microgaming bingo sites</a></div>
+      </li>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarSlots" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Slots</a>
+        <div class="dropdown-menu" aria-labelledby="navbarSlots"><a class="dropdown-item" href="#">No deposit slots</a></div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="individual-bingo.html">Compare Bingo</a></li>
+    </ul>
   </div>
 </nav>

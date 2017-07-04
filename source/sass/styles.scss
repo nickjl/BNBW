@@ -23,7 +23,7 @@
 
 // Components
 @import "scss/transitions";
-//@import "scss/dropdown";
+@import "scss/dropdown";
 @import "scss/button-group";
 //@import "scss/input-group";
 //@import "scss/custom-forms";
@@ -31,7 +31,7 @@
 @import "scss/navbar";
 @import "scss/card";
 //@import "scss/breadcrumb";
-//@import "scss/pagination";
+@import "scss/pagination";
 //@import "scss/badge";
 //@import "scss/jumbotron";
 //@import "scss/alert";
@@ -55,9 +55,15 @@
 @import "partials/flexgrid";
 @import "partials/header";
 @import "partials/homepage";
+@import "partials/offer-card";
 @import "partials/slider";
 @import "partials/footer";
 @import "partials/bingosites";
+@import "partials/individual-bingo";
+@import "partials/bingo-card";
+@import "partials/article";
+
+
 
 
 

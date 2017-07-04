@@ -1,0 +1,225 @@
+$colorBg: #31104b;
+$padding: 1rem;
+
+// typography
+.cardCasino {
+  color: white;
+  border-bottom: 1px solid desaturate(darken($primary, 30%), 40%);
+
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  li {
+    background: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  .offer a, .copy a:first-of-type {
+    text-decoration: none;
+  }
+}
+
+.btn-play {
+  color: $brand;
+  padding: 10px 15px;
+  border-radius: 70px;
+  background: #ffffff;
+  margin-bottom: 15px;
+}
+
+.star {
+  height: 25px;
+}
+
+// offer alghn cta
+.offer_cta {
+  align-self: flex-end;
+}
+
+.offer {
+  align-self: flex-end;
+}
+
+// review for mobile
+.copy {
+  //border: 1px solid red;
+  display: inline-flex;
+}
+
+.mobileView {}
+
+// space
+.info {
+  width: auto;
+}
+
+.union {
+  .offer {
+    flex-grow: 1;
+  }
+  .ctaSection {
+    flex-grow: 1;
+  }
+}
+
+// padding
+.info {
+  padding: 0;
+}
+
+.union {
+  .offer, .ctaSection {
+    padding: $padding;
+  }
+}
+
+.offerCopy, .iconList {
+  color: white;
+}
+
+
+.bingo-card__arrow {
+  height: 30px;
+  margin-bottom: .5rem;
+}
+
+.tac {
+  font-family: serif;
+  font-style: italic;
+  color: lighten($colorBg, 70%);
+}
+
+.info {
+  background: desaturate($colorBg, 20%);
+}
+
+.union {
+  width: 100%;
+  background: darken($colorBg, 5%);
+  .offer {
+    background: darken($colorBg, 5%);
+  }
+  .ctaSection {
+    background: desaturate($colorBg, 20%);
+  }
+}
+
+.casinoInfo_rating {
+  .ratingStar {
+    width: auto;
+    height: 1.4rem;
+  }
+  span {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.casinoLogo {
+  height: 6rem;
+}
+
+.icon {
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  fill: $primary;
+}
+
+.reviewCta {
+  padding-right: 1rem;
+}
+
+.bingo-card__arrow {
+  stroke: $primary;
+}
+
+@include media-breakpoint-up(sm) {
+  .casinoLogo {
+    border-radius: 50%;
+    height: 5rem;
+  }
+  .casinoInfo_rating {
+    //padding-right: 1rem;
+    .ratingStar {
+      //width: 10rem;
+    }
+    span {
+      font-size: 1.8rem;
+    }
+  }
+
+  .btn-play {
+    margin-bottom: 0;
+  }
+  // spacing
+  .info {
+    padding: $padding;
+    width: 45%;
+  }
+}
+
+
+.filter-results {
+  .cardCasino {
+    color: $txt1;
+    border-bottom: 1px solid desaturate(lighten($primary, 30%), 40%);
+
+    h2 {
+      color: $brand;
+
+    }
+
+    a {
+      color: $brand;
+    }
+  }
+
+
+  .bingo-card__arrow {
+    stroke: $brand;
+  }
+
+  .btn-play {
+    color: #ffffff;
+    background: $brand;
+  }
+
+
+  .offerCopy {
+    color: $brand;
+  }
+
+  .iconList {
+    color: $txt2;
+  }
+
+  .tac {
+    color: $txt2;
+  }
+
+  .info {
+    background: #ffffff;
+  }
+
+  .union {
+    background: desaturate(lighten($brand, 60%), 40%);
+    .offer {
+      background: desaturate(lighten($brand, 60%), 40%);;
+    }
+    .ctaSection {
+      background: #ffffff;
+    }
+  }
+
+}

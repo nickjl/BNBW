@@ -1,0 +1,27 @@
+mixin listIcons(responsiveClass, id)
+    ul.list-unstyled.d-flex.justify-content-around.iconList(class= responsiveClass)
+        li.p-1
+            svg.icon(viewBox="0 0 110 110")
+                use(xlink:href="#bingo" x="0" y="0")
+            p= id + " BINGO"
+        li.p-1
+            svg.icon(viewBox="0 0 110 110")
+                use(xlink:href="#videoSpins" x="0" y="0")
+            p= id + " BONUS"
+        li.p-1
+            svg.icon(viewBox="0 0 110 110")
+                use(xlink:href="#freeSpins" x="0" y="0")
+            p= id + " SPINS"
+mixin tac(responsiveClass, id)
+    p.tac.small(class= responsiveClass)= id + " New players only. T&Cs including wagering requirements apply"
+mixin titleCasino(responsiveClass, id)
+    a(href="#")
+        h2(class= responsiveClass)= "LoveHearts Bingo " + id
+mixin offer(responsiveClass, id)
+
+    a(href="").d-flex.flex-row.align-items-center
+        h3.offerCopy(class= responsiveClass)= id + " £10 No deposit & 500% Bingo Bonus"
+        svg.bingo-card__arrow(viewBox="0 0 110 110")
+            use(xlink:href="#arrowRight" x="0" y="0")
+mixin reviewLink(responsiveClass, id)
+    a.reviewCta(href="#" class= responsiveClass)= "Read review " + id

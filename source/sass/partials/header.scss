@@ -1,10 +1,23 @@
-.navbar__logo {
-  height: 80px;
-}
-
 .navbar {
-  background: $theme-color-2;
+  button:focus {
+    outline: none;
+  }
+
+  background: darken($brand, 20%);
   color: #ffffff;
+
+  &__logo {
+    height: 80px;
+  }
+
+  &__button {
+    height: 50px;
+  }
+
+  li {
+    background: none;
+    padding-left: 0;
+  }
 }
 
 .nav-link {
@@ -12,10 +25,19 @@
   text-decoration: none;
 }
 
-.nav-link:hover {
-  color: $theme-color-1;
+.nav-link:hover, .nav-link:focus {
+  color: $primary;
 }
 
+.dropdown-menu {
+  background: darken($brand, 20%);
+  z-index: 9000000;
+}
+
+.dropdown-item {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 @include media-breakpoint-down(md) {
   g#Tag {
@@ -24,6 +46,19 @@
 
   .navbar__logo {
     height: 65px;
+  }
+
+}
+
+
+@include media-breakpoint-up(lg) {
+  .navbar-toggleable-md .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .dropdown-item {
+    padding: 8px 1.5rem;
   }
 
 }

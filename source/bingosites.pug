@@ -1,23 +1,179 @@
 extends views/layout
 
 
+
 block content
+
+    include views/includes/bingo-card/bingo-card
+
+    mixin bingoCardSite()
+        .d-flex.cardCasino.flex-column.justify-content-between.flex-sm-row.align-items-stretch.w-100
+            // section 01 - rating txt, stars, logo image & name
+            section.info.d-flex.justify-content-between.justify-content-sm-center.align-items-center
+                .img-rating.d-flex.flex-row.flex-sm-row-reverse.flex-wrap.flex-md-nowrap.justify-content-center
+                    img.img-fluid.casinoLogo(src="/assets/images/sampleLogo/chitChat.jpg")
+                    .copy.p-2.d-flex.flex-column
+                        +titleCasino("hidden-sm-up", "")
+                        .casinoInfo_rating.d-flex.flex-sm-column-reverse
+                            //svg(viewBox="0 0 110 110")
+                                use(xlink:href="#fullStar" x="0" y="0")
+                            //svg(viewBox="0 0 110 110")
+                                use(xlink:href="#halfStar" x="0" y="0")
+                            .d-flex
+                                img.ratingStar(src="/assets/images/rating_on.gif")
+                                img.ratingStar(src="/assets/images/rating_on.gif")
+                                img.ratingStar(src="/assets/images/rating_on.gif")
+                                img.ratingStar(src="/assets/images/rating_on.gif")
+                                img.ratingStar(src="/assets/images/rating_on.gif")
+                            span.text-center 3.5/5
+                        +reviewLink("hidden-sm-up mobileView", "")
+            // section 02 - offer & CTA
+            .union.d-flex.flex-column.flex-sm-row
+
+                section.offer.align-self-center
+                    +titleCasino("hidden-xs-down", "")
+                    +offer("", "")
+                    +tac("hidden-xs-down", "")
+                    +listIcons("d-flex hidden-sm-up", "")
+
+                section.ctaSection
+                    +listIcons("d-flex hidden-xs-down", "")
+                    .d-flex.justify-content-around.align-items-center.flex-column.flex-sm-row.cta
+                        +reviewLink("hidden-xs-down text-center deskView", "")
+                        button.btn.btn-play(href="#") Play Now
+                        +tac("hidden-sm-up", "")
+
+
     section.intro
-        .d-flex.g1__s1
-            .c1.d-flex.justify-content-end
+        .d-flex.g1__s2
+            .c1.d-flex.justify-content-around.justify-content-lg-end
                 .p-2
                     h2 Filter the new bingo sites
-
+            .c2.d-flex.justify-content-end.px-2
+                button.btn.btn-filter.hidden-lg-up.show-filter
+                    svg(viewBox="0 0 110 110")
+                        use(xlink:href="#filter" x="0" y="0")
     section.filter
-        .d-flex.flex-column.flex-md-row.g1__s1
-            .c1.filter-box.p-4.hidden-md-down
-                h2 test
+        .d-flex.flex-column.flex-lg-row.g1__s2
+            .c1.filter-box.d-lg-flex.justify-content-center
+                .d-flex.flex-column
+                    button.btn.btn-close.hidden-lg-up.hide-filter
+                        svg(viewBox="0 0 110 110")
+                            use(xlink:href="#cross" x="0" y="0")
+                    h3.my-4 Deposit bonus
+                    input#c1(type='checkbox', name='cc')
+                    label(for='c1')
+                        span
+                        | No Bonus
+                    input#c2(type='checkbox', name='cc')
+                    label(for='c2')
+                        span
+                        | 1% or more
+                    input#c5(type='checkbox', name='cc')
+                    label(for='c5')
+                        span
+                        | 50% or more
+                    input#c6(type='checkbox', name='cc')
+                    label(for='c6')
+                        span
+                        | 100% or more
+                    input#c7(type='checkbox', name='cc')
+                    label(for='c7')
+                        span
+                        | 200% or more
+                    a.font-italic.align-self-start.my-4(href="") More deposit bonus filters
 
-            .c2.bingo-card.d-flex.flex-row
-                .bingo-card__summary.p-2.d-flex.flex-row
-                    h2 rating
-                    img.mr-3(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=", data-src="/assets/images/sampleLogo/chitChat.jpg")
-                .bingo-card__details.p-2
-                    h2 details
-                .bingo-card__icons.p-2
-                    h2 icons
+                    h3.my-4 Launch Date
+                    input#launch1(type='checkbox', name='cc')
+                    label(for='launch1')
+                        span
+                        | Up to 6 months old
+                    input#launch2(type='checkbox', name='cc')
+                    label(for='launch2')
+                        span
+                        | Up to a year old
+                    input#launch3(type='checkbox', name='cc')
+                    label(for='launch3')
+                        span
+                        | Up to 5 years old
+                    input#launch4(type='checkbox', name='cc')
+                    label(for='launch4')
+                        span
+                        | Up to 10 years old
+
+                    h3.my-4 Rating
+                    input#rating1(type='checkbox', name='cc')
+                    label(for='rating1')
+                        span
+                        | 4/5 & up
+                    input#rating2(type='checkbox', name='cc')
+                    label(for='rating2')
+                        span
+                        | 3/5 & up
+                    input#rating3(type='checkbox', name='cc')
+                    label(for='rating3')
+                        span
+                        | 2/5 & up
+                    input#rating4(type='checkbox', name='cc')
+                    label(for='rating4')
+                        span
+                        | 1/5 & up
+
+
+                    h3.my-4 Software provider
+                    input#software1(type='checkbox', name='cc')
+                    label(for='software1')
+                        span
+                        | Gamesys
+                    input#software2(type='checkbox', name='cc')
+                    label(for='software2')
+                        span
+                        | CozyGames
+                    input#software3(type='checkbox', name='cc')
+                    label(for='software3')
+                        span
+                        | Dragonfish
+                    input#software4(type='checkbox', name='cc')
+                    label(for='software4')
+                        span
+                        | Virtue Fusion
+                    a.font-italic.align-self-start.my-4(href="") More software provider filters
+
+
+                    button.btn.btn-advanced Advanced Filter
+
+                .apply-container.hidden-lg-up
+                    button.btn.btn-apply.hide-filter APPLY FILTER
+
+
+
+
+            .c2.d-lg-flex.flex-column.all-results
+                p.sponsored-links Sponsored links
+                +bingoCardSite()
+                +bingoCardSite()
+                +bingoCardSite()
+
+
+                .filter-results
+                    p.result-text Your result
+                    +bingoCardSite()
+                    +bingoCardSite()
+                    +bingoCardSite()
+                    +bingoCardSite()
+
+                    nav(aria-label='Page navigation')
+                        ul.pagination.justify-content-end
+                            li.page-item.disabled.text-right
+                                a.page-link(href='#', tabindex='-1') &laquo; Previous
+                            li.page-item.active
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') 4
+                            li.page-item
+                                a.page-link(href='#') Next &raquo;
+

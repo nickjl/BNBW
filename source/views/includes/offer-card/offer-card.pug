@@ -1,5 +1,5 @@
-mixin bingoCard (image, title)
-    .offer-card.my-5.g1__s2
+mixin bingoCard (image, title, hidden)
+    .offer-card.my-5.g1__s2(class= hidden)
         .d-flex.flex-row.offer-card__top.mb-2
             .d-flex.c1.justify-content-center
                 img.mx-3(src="/assets/images/sampleLogo/" + image + ".jpg")
@@ -10,10 +10,11 @@ mixin bingoCard (image, title)
         .d-flex.c2.ml-auto.mb-3.px-2
             p Ghost Bingo is a Cozy bingo site on the Best Bingo Network, with all the usual network promotions and huge bonuses
                 a.ml-2(href="") read more...
-        .offer-card__strip.p-2.d-flex.justify-content-around.align-items-center
+        a.offer-card__strip.p-2.d-flex.justify-content-around.align-items-center(href="")
             span.px-2
             span £100 Deposit & 500% Bingo Bonus + 50 Free Spins
-            span.px-2 >
+            svg.offer-card__arrow(viewBox="0 0 110 110")
+                use(xlink:href="#arrowRight" x="0" y="0")
         .d-flex.flex-column.offer-card__bottom.px-2.py-4
             ul.list-unstyled
                 li Deposit £10 play with £40

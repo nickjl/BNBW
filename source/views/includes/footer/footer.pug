@@ -1,91 +1,94 @@
 mixin bingoSite (title, img)
-    a.d-flex.flex-row.p-1.align-items-center(href="")
-        img.mr-3(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=", data-src="/assets/images/sampleLogo/" + img + ".jpg")
-        span.footer-title= title
+    li
+        a.d-flex.flex-row.p-1.align-items-center(href="")
+            img.mr-3(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=", data-src="/assets/images/sampleLogo/" + img + ".jpg")
+            span.footer-title= title
 
-section.footer-container.subscribe-box.p-4
-    .d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
-        .c2.d-flex.justify-content-center
-            h2 Get £1000 in bonus offers
-        .c1.d-flex.flex-column.align-items-center
-            input.subscribe-box__email(id="register", type="email", placeholder="Enter your email")
-            label.terms-conditions
-                input(type="checkbox")
-                | I have read the
-                a.pl-1.font-italic(href="") Terms & Conditions
-            button.btn.btn-send(type="button") SUBMIT
+footer
+    .footer-container.subscribe-box.p-4
+        .d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
+            .c2.d-flex.justify-content-center
+                h2 Get £1000 in bonus offers
+            .c1.d-flex.flex-column.align-items-center
+                input.subscribe-box__email(id="register", type="email", placeholder="Enter your email")
+                input#c4(type='checkbox', name='cc')
+                label.terms-conditions(for='c4')
+                    span
+                    | I have read the
+                    a.pl-1.font-italic(href="") Terms & Conditions
+                button.btn.btn-send(type="button") SUBMIT
 
-section.footer-sites
-    .d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.g1__footer.container
-        .c1.p-3
-            h2 £5 Deposit Sites
-            hr.title-underline
-            .d-flex.flex-column
-                +bingoSite("Monkey", "monkey")
-                +bingoSite("Rewind", "rewind")
-                +bingoSite("Sailor", "sailor")
-                +bingoSite("Sky", "sky")
+    .footer-sites
+        .d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.g1__footer.container
+            .c1.p-3
+                h2 £5 Deposit Sites
+                hr.title-underline
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Monkey", "monkey")
+                    +bingoSite("Rewind", "rewind")
+                    +bingoSite("Sailor", "sailor")
+                    +bingoSite("Sky", "sky")
 
-        .c1.p-3
-            h2 New Bingo Sites
-            hr.title-underline
-            .d-flex.flex-column
-                +bingoSite("Monkey", "monkey")
-                +bingoSite("Rewind", "rewind")
-                +bingoSite("Sailor", "sailor")
-                +bingoSite("Sky", "sky")
+            .c1.p-3
+                h2 New Bingo Sites
+                hr.title-underline
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Monkey", "monkey")
+                    +bingoSite("Rewind", "rewind")
+                    +bingoSite("Sailor", "sailor")
+                    +bingoSite("Sky", "sky")
 
-        .c1.p-3
-            h2 Player favourites
-            hr.title-underline
-            .d-flex.flex-column
-                +bingoSite("Monkey", "monkey")
-                +bingoSite("Rewind", "rewind")
-                +bingoSite("Sailor", "sailor")
-                +bingoSite("Sky", "sky")
+            .c1.p-3
+                h2 Player favourites
+                hr.title-underline
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Monkey", "monkey")
+                    +bingoSite("Rewind", "rewind")
+                    +bingoSite("Sailor", "sailor")
+                    +bingoSite("Sky", "sky")
 
-        .c1.p-3
-            h2 £5 Deposit Sites
-            hr.title-underline
-            .d-flex.flex-column
-                +bingoSite("Monkey", "monkey")
-                +bingoSite("Rewind", "rewind")
-                +bingoSite("Sailor", "sailor")
-                +bingoSite("Sky", "sky")
-
-
-section.about-us.py-5
-    .d-flex.flex-column.flex-lg-row.g1__s1.container
-        .c1.d-flex.flex-column
-            .d-flex.flex-row.my-4.my-lg-0
-                a.ml-0(href="") About us
-                a(href="") Advertise with us
-                a(href="") Contact us
-            p All offers advertised on Best New Bingo Sites are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
-        .c2.d-flex.justify-content-lg-end.flex-first.flex-lg-unordered
-            // TrustBox widget - Micro Review Count
-            .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light')
-                a(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank') Trustpilot
-            // End TrustBox widget
+            .c1.p-3
+                h2 £5 Deposit Sites
+                hr.title-underline
+                ul.d-flex.flex-column.list-unstyled
+                    +bingoSite("Monkey", "monkey")
+                    +bingoSite("Rewind", "rewind")
+                    +bingoSite("Sailor", "sailor")
+                    +bingoSite("Sky", "sky")
 
 
-section.legal-logos.py-5
-    .d-flex.flex-column.flex-md-row.g1.g1__footer-logos.container
-        .c1.d-flex.align-items-center
-            svg.footer-logo(viewBox="0 0 62.3 70")
-                use(xlink:href="#game_care" x="0" y="0")
-            p.ml-3 Nominee - Best website <br/> 2017 and 2016
-        .c2.d-flex.justify-content-lg-end
-            svg.mr-3.footer-logo(viewBox="0 0 205.9 70")
-                use(xlink:href="#gambleware18plusst" x="0" y="0")
-            svg.navbar__logo(viewBox="0 0 62.3 70")
-                use(xlink:href="#game_care" x="0" y="0")
-    .container
-        hr.footer-underline
-    .container
-        .d-flex.flex-row.flex-wrap.justify-content-center
-            a(href="") Sitemap
-            a(href="") Terms & Conditions
-            a(href="") Privacy policy
-            a(href="") Responsive gambling
-        p.small.text-center Copyright Best New Bingo Sites 2017. All rights reserved.
+    .about-us.py-5
+        .d-flex.flex-column.flex-lg-row.g1__s1.container
+            .c1.d-flex.flex-column
+                .d-flex.flex-row.my-4.my-lg-0
+                    a.ml-0(href="") About us
+                    a(href="") Advertise with us
+                    a(href="") Contact us
+                p All offers advertised on Best New Bingo Sites are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
+            .c2.d-flex.justify-content-lg-end.flex-first.flex-lg-unordered
+                // TrustBox widget - Micro Review Count
+                .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light')
+                    a(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank') Trustpilot
+                // End TrustBox widget
+
+
+    .legal-logos.py-5
+        .d-flex.flex-column.flex-md-row.g1.g1__footer-logos.container
+            .c1.d-flex.align-items-center
+                svg.footer-logo(viewBox="0 0 261.85 261.85")
+                    use(xlink:href="#igb" x="0" y="0")
+                p.ml-3 Nominee - Best website <br/> 2017 and 2016
+            .c2.d-flex.justify-content-lg-end
+                svg.mr-3.footer-logo(viewBox="0 0 205.9 70")
+                    use(xlink:href="#gambleware18plusst" x="0" y="0")
+                svg.footer-logo(viewBox="0 0 62.3 70")
+                    use(xlink:href="#game_care" x="0" y="0")
+        .container
+            hr.footer-underline
+        .container
+            .d-flex.flex-row.flex-wrap.justify-content-center
+                a(href="") Sitemap
+                a(href="") Terms & Conditions
+                a(href="") Privacy policy
+                a(href="") Responsive gambling
+            p.small.text-center Copyright Best New Bingo Sites 2017. All rights reserved.

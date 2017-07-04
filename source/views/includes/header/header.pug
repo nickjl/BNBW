@@ -1,16 +1,40 @@
 nav.navbar.navbar-toggleable-md.px-4
     button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarBNBW', aria-controls='navbarBNBW', aria-expanded='false', aria-label='Toggle navigation')
-        span.navbar-toggler-icon
-    a.navbar-brand.mx-auto(href='index.html')
+        svg.navbar__button(viewBox="0 0 110 110")
+            use(xlink:href="#hamburger" x="0" y="0")
+    a.text-center(href='index.html')
         svg.navbar__logo(viewBox="0 0 157 80")
             use(xlink:href="#logo" x="0" y="0")
     #navbarBNBW.collapse.navbar-collapse
-        .navbar-nav.mx-md-auto
-            a.nav-item.nav-link.active(href='index.html')
-                | HOME
-                span.sr-only (current)
-            a.nav-item.nav-link(href='bingosites.html') New bingo sites
-            a.nav-item.nav-link(href='#') New articles
-            a.nav-item.nav-link(href='#') Offers
-            a.nav-item.nav-link(href='#') Promotions
-            a.nav-item.nav-link(href='#') Guides
+
+        ul.navbar-nav.mx-md-auto
+            li.nav-item.active
+                a.nav-link(href='index.html')
+                    | Home
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='bingosites.html') New bingo sites
+            li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | Offers
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                    a.dropdown-item(href='#') No deposit
+                    a.dropdown-item(href='#') Free bingo
+                    a.dropdown-item(href='#') Latest promotions
+            li.nav-item.dropdown
+                a#navbarBingoSites.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | Bingo Sites
+                .dropdown-menu(aria-labelledby='navbarBingoSites')
+                    a.dropdown-item(href='#') Mobile bingo
+                    a.dropdown-item(href='#') Cosy bingo sites
+                    a.dropdown-item(href='#') Dragonfish bingo sites
+                    a.dropdown-item(href='#') Virtue fusion bingo sites
+                    a.dropdown-item(href='#') Payment methods
+                    a.dropdown-item(href='#') Microgaming bingo sites
+            li.nav-item.dropdown
+                a#navbarSlots.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | Slots
+                .dropdown-menu(aria-labelledby='navbarSlots')
+                    a.dropdown-item(href='#') No deposit slots
+            li.nav-item
+                a.nav-link(href='individual-bingo.html') Compare Bingo
