@@ -18,6 +18,11 @@ module.exports = function (grunt) {
                 tasks: ['pug']
             },
 
+            js: {
+                files: ['source/assets/js/*.js'],
+                tasks: ['concat', 'uglify']
+            },
+
             // browserSync: {
             //     files: ['app/**/*.css', 'app/**/*.html'],
             //     tasks: ['pug']
@@ -30,7 +35,7 @@ module.exports = function (grunt) {
             dev: {
                 files: {
                     // destination				// source file
-                    'app/css/app.css':			'source/sass/styles.scss',
+                    'source/assets/css/app.min.css':			'source/sass/styles.scss',
                     // other casnos
                     //'app/css/amphome.css':			'source/sass/ampstyles.scss',
                     //'app/css/ampcasino.css':			'source/sass/casinoampstyles.scss',
@@ -49,7 +54,7 @@ module.exports = function (grunt) {
         autoprefixer: {
             dev: {
                 files: {
-                    'app/css/app.css': 'app/css/app.css'
+                    'app/assets/css/bnbs.min.css': 'app/assets/css/bnbs.min.css'
                 }
             }
         },
@@ -63,7 +68,7 @@ module.exports = function (grunt) {
                 },
                 files: [ {
                     cwd: 'source',
-                    src: '**/*.pug',
+                    src: '*.pug',
                     dest: 'app/',
                     expand: true,
                     ext: '.html'
@@ -71,16 +76,37 @@ module.exports = function (grunt) {
             }
         },
 
-        // uglify: {
-        //     options: {
-        //         mangle: false
-        //     },
-        //     my_target: {
-        //         files: {
-        //             'app/assets/js/bxSlider.min.js': ['source/assets/js/bxSlider.js']
-        //         }
-        //     }
-        // },
+        concat: {
+
+            js: {
+                // the files to concatenate
+                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js', 'source/assets/js/bxSliderHome.js', 'source/assets/js/filter.js'],
+                // the location of the resulting JS file
+                dest: 'app/assets/js/bnbs.js',
+                options: {
+                    // define a string to put between each file in the concatenated output
+                    separator: ';'
+                }
+
+            },
+
+            css: {
+                src: ['source/assets/css/jquery.bxslider.min.css', 'source/assets/css/app.min.css'],
+                dest: 'app/assets/css/bnbs.min.css'
+            }
+
+        },
+
+        uglify: {
+            options: {
+                mangle: true
+            },
+            my_target: {
+                files: {
+                    'app/assets/js/bnbs.min.js': ['app/assets/js/bnbs.js']
+                }
+            }
+        },
 
 
         copy: {
@@ -129,6 +155,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-pug');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-browser-sync');
 
