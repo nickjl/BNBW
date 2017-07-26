@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['source/**/*.sass', 'source/**/*.scss'],
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass', 'autoprefixer', 'concat']
             },
 
             css: {
@@ -64,7 +64,10 @@ module.exports = function (grunt) {
             compile: {
                 options: {
                     client: false,
-                    pretty: true
+                    pretty: true,
+                    data: {
+                        data: grunt.file.readJSON('./source/data/data.json')
+                    }
                 },
                 files: [ {
                     cwd: 'source',
@@ -80,7 +83,7 @@ module.exports = function (grunt) {
 
             js: {
                 // the files to concatenate
-                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.js', 'source/assets/js/bxSliderHome.js', 'source/assets/js/filter.js'],
+                src: ['source/assets/js/jquery.bxslider.min.js', 'source/assets/js/tether.min.js', 'source/assets/js/bootstrap.min.js', 'source/assets/js/bxSliderHome.js', 'source/assets/js/filter.js'],
                 // the location of the resulting JS file
                 dest: 'app/assets/js/bnbs.js',
                 options: {

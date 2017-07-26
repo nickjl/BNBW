@@ -51,40 +51,6 @@
 }
 
 
-.pagination {
-  margin-top: 1rem;
-}
-
-.pagination li {
-  background: none;
-  padding-left: 0;
-}
-.page-link {
-  border: none;
-  color: $brand;
-  margin-left: 0;
-  text-decoration: none;
-}
-
-.page-link:hover {
-  background: $brand;
-  color: #ffffff;
-  border-bottom: 2px solid $brand;
-
-}
-
-.page-item.active .page-link {
-  background: #ffffff;
-  color: $grey;
-  box-sizing: border-box;
-  border-bottom: 2px solid $grey;
-
-}
-
-.page-item.disabled .page-link {
-  color: $grey;
-}
-
 
 
 

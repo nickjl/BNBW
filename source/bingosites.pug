@@ -6,12 +6,12 @@ block content
 
     include views/includes/bingo-card/bingo-card
 
-    mixin bingoCardSite()
+    mixin bingoCardSite(image)
         .d-flex.cardCasino.flex-column.justify-content-between.flex-sm-row.align-items-stretch.w-100
             // section 01 - rating txt, stars, logo image & name
             section.info.d-flex.justify-content-between.justify-content-sm-center.align-items-center
                 .img-rating.d-flex.flex-row.flex-sm-row-reverse.flex-wrap.flex-md-nowrap.justify-content-center
-                    img.img-fluid.casinoLogo(src="assets/images/sampleLogo/chitChat.jpg")
+                    img.img-fluid.casinoLogo(src="assets/images/logo/" + image + ".png", style="background-color: ")
                     .copy.p-2.d-flex.flex-column
                         +titleCasino("hidden-sm-up", "")
                         .casinoInfo_rating.d-flex.flex-sm-column-reverse
@@ -150,17 +150,17 @@ block content
 
             .c2.d-lg-flex.flex-column.all-results
                 p.sponsored-links Sponsored links
-                +bingoCardSite()
-                +bingoCardSite()
-                +bingoCardSite()
+                +bingoCardSite("chit-chat-bingo")
+                +bingoCardSite("fabulousbingo")
+                +bingoCardSite("chit-chat-bingo")
 
 
                 .filter-results
                     p.result-text Your result
-                    +bingoCardSite()
-                    +bingoCardSite()
-                    +bingoCardSite()
-                    +bingoCardSite()
+                    +bingoCardSite("chit-chat-bingo")
+                    +bingoCardSite("chit-chat-bingo")
+                    +bingoCardSite("chit-chat-bingo")
+                    +bingoCardSite("chit-chat-bingo")
 
                     nav(aria-label='Page navigation')
                         ul.pagination.justify-content-end
