@@ -4,6 +4,8 @@ mixin bingoSite (title, img)
             img.mr-3(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=", data-src="/assets/images/sampleLogo/" + img + ".jpg")
             span.footer-title= title
 
+include logo-images
+
 footer
     .footer-container.subscribe-box.p-4
         .d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
@@ -24,37 +26,49 @@ footer
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Monkey", "monkey")
-                    +bingoSite("Rewind", "rewind")
-                    +bingoSite("Sailor", "sailor")
-                    +bingoSite("Sky", "sky")
+                    +bingoSite("Paddy Power Bingo", "monkey")
+                    +bingoSite("Vernons Bingo", "rewind")
+                    +bingoSite("Rewind Bingo", "sailor")
+                    +bingoSite("Coral Bingo", "sky")
+                    +bingoSite("Kingdom Bingo", "rewind")
+                    +bingoSite("Treasure Bingo ", "sailor")
+                    +bingoSite("Iceland Bingo", "sky")
 
             .c1.p-3
                 h2 New Bingo Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Monkey", "monkey")
-                    +bingoSite("Rewind", "rewind")
-                    +bingoSite("Sailor", "sailor")
-                    +bingoSite("Sky", "sky")
+                    +bingoSite("Good Day Bingo", "monkey")
+                    +bingoSite("Fabulous Bingo", "rewind")
+                    +bingoSite("Bid Bingo", "sailor")
+                    +bingoSite("Blighty Bingo", "sky")
+                    +bingoSite("Give Back Bingo", "rewind")
+                    +bingoSite("Lovehearts Bingo", "sailor")
+                    +bingoSite("Dabber Bingo", "sky")
 
             .c1.p-3
                 h2 Player favourites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Monkey", "monkey")
-                    +bingoSite("Rewind", "rewind")
-                    +bingoSite("Sailor", "sailor")
-                    +bingoSite("Sky", "sky")
+                    +bingoSite("Fabulous Bingo", "monkey")
+                    +bingoSite("Costa Bingo", "rewind")
+                    +bingoSite("Sky Bingo", "sailor")
+                    +bingoSite("Wink Bingo", "sky")
+                    +bingoSite("Mecca Bingo", "rewind")
+                    +bingoSite("Heart Bingo", "sailor")
+                    +bingoSite("Kitty Bingo", "sky")
 
             .c1.p-3
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Monkey", "monkey")
-                    +bingoSite("Rewind", "rewind")
-                    +bingoSite("Sailor", "sailor")
-                    +bingoSite("Sky", "sky")
+                    +bingoSite("Glitter Bingo", "monkey")
+                    +bingoSite("Jackpot Liner", "rewind")
+                    +bingoSite("Girly Bingo", "sailor")
+                    +bingoSite("Rewind Bingo", "sky")
+                    +bingoSite("Costa Bingo", "rewind")
+                    +bingoSite("BinoStars Bingo", "sailor")
+                    +bingoSite("Plush Bingo", "sky")
 
 
     .about-us.py-5
