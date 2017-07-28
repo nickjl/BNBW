@@ -3,7 +3,7 @@ $s1: 40%;
 $s2: 30%;
 
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
 
   .g1 {
     &__footer {
@@ -25,51 +25,52 @@ $s2: 30%;
     }
 
   }
+}
 
-  @include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg) {
 
-    .g1 {
-      .c1 {
-        width: $half;
-      }
-      .c2 {
-        width: $half;
-      }
-
-      &__s1 {
-        .c1 {
-          width: $s1;
-        }
-        .c2 {
-          width: 100% - $s1;
-        }
-
-      }
-
-      &__s2 {
-        .c1 {
-          width: $s2;
-        }
-        .c2 {
-          width: 100% - $s2;
-        }
-
-      }
-
-      &__footer {
-        .c1 {
-          width: $half/2;
-        }
-        .c2 {
-          width: $half/2;
-        }
-      }
+  .g1 {
+    .c1 {
+      width: $half;
+    }
+    .c2 {
+      width: $half;
     }
 
+    &__s1 {
+      .c1 {
+        width: $s1;
+      }
+      .c2 {
+        width: 100% - $s1;
+      }
+
+    }
+
+    &__s2 {
+      .c1 {
+        width: $s2;
+      }
+      .c2 {
+        width: 100% - $s2;
+      }
+
+    }
+
+    &__footer {
+      .c1 {
+        width: $half/2;
+      }
+      .c2 {
+        width: $half/2;
+      }
+    }
   }
 
-
 }
+
+
+
 
 @include media-breakpoint-up(md) {
 

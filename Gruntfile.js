@@ -134,6 +134,17 @@ module.exports = function (grunt) {
 
 
 
+        base64: {
+            target: {
+                files: {
+                    src: 'app/assets/images/logo/*.png',
+                    dest: 'app/b64/'
+                }
+            }
+        },
+
+
+
         // Using the BrowserSync Server for your static .html files.
         browserSync: {
             default_options: {
@@ -161,6 +172,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-base64');
 
     grunt.registerTask('default', ['browserSync', 'watch']);
 };

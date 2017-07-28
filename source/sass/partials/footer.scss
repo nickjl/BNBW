@@ -47,6 +47,17 @@
   }
 }
 
+$bingo-list: test;
+
+
+
+
+@each $bingo in $bingo-list {
+  .thumb-#{nth($bingo,1)} {
+    background: #{nth($bingo, 2)};
+  }
+}
+
 .footer-sites {
   padding-top: 8rem;
   margin-top: -4rem;
@@ -67,13 +78,13 @@
     max-height: 60px;
     max-width:  60px;
     border-radius: 100%;
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-    transition:         transform .8s ease-in-out;
+    //-webkit-transition: -webkit-transform .8s ease-in-out;
+    //transition:         transform .8s ease-in-out;
   }
 
   img:hover {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    //-webkit-transform: rotate(360deg);
+    //transform: rotate(360deg);
   }
 
 
@@ -84,14 +95,13 @@
 }
 
 .about-us {
-  color: desaturate(darken($brand, 12%), 40%)
-;
+  color: desaturate(darken($brand, 12%), 40%);
   background: lighten($brand, 75%);
 
   a, a:hover {
     color: $brand;
     text-decoration: none;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     font-size: 1rem;
     text-align: center;
   }

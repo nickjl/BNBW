@@ -1,7 +1,7 @@
-mixin bingoSite (title, img)
+mixin bingoSite (title, img, bg)
     li
         a.d-flex.flex-row.p-1.align-items-center(href="")
-            img.mr-3(src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=", data-src="/assets/images/sampleLogo/" + img + ".jpg")
+            img.mr-3(src= img, style="background: " + bg)
             span.footer-title= title
 
 include logo-images
@@ -26,64 +26,69 @@ footer
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Paddy Power Bingo", "monkey")
-                    +bingoSite("Vernons Bingo", "rewind")
-                    +bingoSite("Rewind Bingo", "sailor")
-                    +bingoSite("Coral Bingo", "sky")
-                    +bingoSite("Kingdom Bingo", "rewind")
-                    +bingoSite("Treasure Bingo ", "sailor")
-                    +bingoSite("Iceland Bingo", "sky")
+                    +bingoSite("Paddy Power Bingo", paddyPowerBingo, '#065')
+                    +bingoSite("Vernons Bingo", vernonsBingo, '#380038')
+                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff')
+                    +bingoSite("Coral Bingo", coralBingo, '#002c5c')
+                    +bingoSite("Kingdom Bingo", kingdomBingo, '#fbe78e')
+                    +bingoSite("Treasure Bingo" , treasureBingo, '#b4f1fe')
+                    +bingoSite("Iceland Bingo", icelandBingo, '#fcc74a')
 
             .c1.p-3
                 h2 New Bingo Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Good Day Bingo", "monkey")
-                    +bingoSite("Fabulous Bingo", "rewind")
-                    +bingoSite("Bid Bingo", "sailor")
-                    +bingoSite("Blighty Bingo", "sky")
-                    +bingoSite("Give Back Bingo", "rewind")
-                    +bingoSite("Lovehearts Bingo", "sailor")
-                    +bingoSite("Dabber Bingo", "sky")
+                    +bingoSite("Good Day Bingo", goodDayBingo, '#246bb2')
+                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff')
+                    +bingoSite("Bid Bingo", bidBingo, '#f0f0f0')
+                    +bingoSite("Blighty Bingo", blightyBingo, '#fff')
+                    +bingoSite("Give Back Bingo", giveBackBingo, '#ff2e7e')
+                    +bingoSite("Lovehearts Bingo", loveheartsBingo, '#fef2cd')
+                    +bingoSite("Dabber Bingo", dabberBingo, '#fff')
 
             .c1.p-3
                 h2 Player favourites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Fabulous Bingo", "monkey")
-                    +bingoSite("Costa Bingo", "rewind")
-                    +bingoSite("Sky Bingo", "sailor")
-                    +bingoSite("Wink Bingo", "sky")
-                    +bingoSite("Mecca Bingo", "rewind")
-                    +bingoSite("Heart Bingo", "sailor")
-                    +bingoSite("Kitty Bingo", "sky")
+                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff')
+                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff')
+                    +bingoSite("Sky Bingo", skyBingo, '#5e2caa')
+                    +bingoSite("Wink Bingo", winkBingo, '#4fc5fc')
+                    +bingoSite("Mecca Bingo", meccaBingo, '#7f3e8e')
+                    +bingoSite("Heart Bingo", heartBingo, '#e91c3a')
+                    +bingoSite("Kitty Bingo", kittyBingo, '#0398ce')
 
             .c1.p-3
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Glitter Bingo", "monkey")
-                    +bingoSite("Jackpot Liner", "rewind")
-                    +bingoSite("Girly Bingo", "sailor")
-                    +bingoSite("Rewind Bingo", "sky")
-                    +bingoSite("Costa Bingo", "rewind")
-                    +bingoSite("BinoStars Bingo", "sailor")
-                    +bingoSite("Plush Bingo", "sky")
+                    +bingoSite("Glitter Bingo", glitterBingo, '#5d6db6')
+                    +bingoSite("Jackpot Liner", '', 'test')
+                    +bingoSite("Girly Bingo", girlyBingo, '#d56da6')
+                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff')
+                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff')
+                    +bingoSite("BingoStars Bingo", bingostarsBingo, '#260a38')
+                    +bingoSite("Plush Bingo", plushBingo, '#0a0400')
 
 
     .about-us.py-5
-        .d-flex.flex-column.flex-lg-row.g1__s1.container
-            .c1.d-flex.flex-column
-                .d-flex.flex-row.my-4.my-lg-0
+        .d-flex.flex-column.flex-lg-row.g1.container
+            .c1.d-flex.flex-column.align-items-center.align-items-lg-start
+                .d-flex.my-4.my-lg-0
                     a.ml-0(href="") About us
                     a(href="") Advertise with us
                     a(href="") Contact us
                 p All offers advertised on Best New Bingo Sites are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
-            .c2.d-flex.justify-content-lg-end.flex-first.flex-lg-unordered
-                // TrustBox widget - Micro Review Count
-                .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light')
-                    a(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank') Trustpilot
-                // End TrustBox widget
+            .c2.d-flex.flex-first.flex-lg-unordered.justify-content-center.justify-content-lg-end
+                .d-flex.flex-column.align-items-center
+                    .mb-2
+                        img(src='assets/images/trustPilot/trust-pilot-logo.png')
+                    .my-2
+                        img(src='assets/images/trustPilot/4star.png')
+                    // TrustBox widget - Micro Review Count
+                    .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light')
+                        a(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank') Trustpilot
+                    // End TrustBox widget
 
 
     .legal-logos.py-5
@@ -92,7 +97,7 @@ footer
                 svg.footer-logo(viewBox="0 0 261.85 261.85")
                     use(xlink:href="#igb" x="0" y="0")
                 p.ml-3 Nominee - Best website <br/> 2017 and 2016
-            .c2.d-flex.justify-content-lg-end
+            .c2.d-flex.justify-content-md-end
                 svg.mr-3.footer-logo(viewBox="0 0 205.9 70")
                     use(xlink:href="#gambleware18plusst" x="0" y="0")
                 svg.footer-logo(viewBox="0 0 62.3 70")
