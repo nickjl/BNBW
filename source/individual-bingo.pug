@@ -6,9 +6,12 @@ include views/includes/offer-card/offer-card
 block content
     section.py-5.bingo-site
         .d-flex.flex-column.flex-md-row.g1-md.content-container
-            .c1.d-flex.flex-column.align-items-center.align-items-md-start.justify-content-around
-                h2.bingo-site__title LoveHearts Bingo
-                span.bingo-site__rating 3.5/5 *****
+            .c1.d-flex.flex-column.flex-sm-row
+                div
+                    img.bingo-img(src="assets/images/logo/lovehearts-bingo.png")
+                .d-flex.flex-column.align-items-center.align-items-md-start.justify-content-center.p-2
+                    h1.bingo-site__title LoveHearts Bingo
+                    span.bingo-site__rating 3.5/5 *****
             .c2.d-flex.flex-column.justify-content-center.justify-content-md-end
                 .d-flex.flex-row.justify-content-center.align-items-center.justify-content-md-end
                     a(href="") Write a review
@@ -155,10 +158,10 @@ block content
             h2 Related bingo sites
             hr.title-underline
             .d-flex.flex-column.flex-md-row.flex-wrap.justify-content-between.align-items-center
-                +bingoCard("chitChat", "Chit Chat Bingo")
-                +bingoCard("coralBingo", "Coral Bingo")
-                +bingoCard("fabulous", "Fabulous Bingo")
-                +bingoCard("iconic", "Iconic Bingo")
+                +bingoCard("chit-chat-bingo", "Chit Chat Bingo")
+                +bingoCard("coral-bingo", "Coral Bingo")
+                +bingoCard("fabulousbingo", "Fabulous Bingo")
+                +bingoCard("iconic-bingo", "Iconic Bingo")
 
             nav(aria-label='Page navigation')
                 ul.pagination.justify-content-end

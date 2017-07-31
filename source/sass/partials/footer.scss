@@ -47,16 +47,16 @@
   }
 }
 
-$bingo-list: test;
-
-
-
-
-@each $bingo in $bingo-list {
-  .thumb-#{nth($bingo,1)} {
-    background: #{nth($bingo, 2)};
-  }
-}
+//$bingo-list: test test test, test2 test2 test2;
+//
+//
+//
+//
+//@each $bingo in $bingo-list {
+//  .thumb-#{nth($bingo,1)} {
+//    background: #{nth($bingo, 2)};
+//  }
+//}
 
 .footer-sites {
   padding-top: 8rem;
