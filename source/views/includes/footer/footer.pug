@@ -1,6 +1,6 @@
-mixin bingoSite (title, img, bg)
+mixin bingoSite (title, img, bg, link)
     li
-        a.d-flex.flex-row.p-1.align-items-center(href="")
+        a.d-flex.flex-row.p-1.align-items-center(href="" + link)
             img.mr-3(src= img, style="background: " + bg)
             span.footer-title= title
 
@@ -26,49 +26,49 @@ footer
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Paddy Power Bingo", paddyPowerBingo, '#065')
-                    +bingoSite("Vernons Bingo", vernonsBingo, '#380038')
-                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff')
-                    +bingoSite("Coral Bingo", coralBingo, '#002c5c')
-                    +bingoSite("Kingdom Bingo", kingdomBingo, '#fbe78e')
-                    +bingoSite("Treasure Bingo" , treasureBingo, '#b4f1fe')
-                    +bingoSite("Iceland Bingo", icelandBingo, '#fcc74a')
+                    +bingoSite("Paddy Power Bingo", paddyPowerBingo, '#065', '')
+                    +bingoSite("Vernons Bingo", vernonsBingo, '#380038', '')
+                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff', '')
+                    +bingoSite("Coral Bingo", coralBingo, '#002c5c', '')
+                    +bingoSite("Kingdom Bingo", kingdomBingo, '#fbe78e', '')
+                    +bingoSite("Treasure Bingo" , treasureBingo, '#b4f1fe', '')
+                    +bingoSite("Iceland Bingo", icelandBingo, '#fcc74a', '')
 
             .c1.p-3
                 h2 New Bingo Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Good Day Bingo", goodDayBingo, '#246bb2')
-                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff')
-                    +bingoSite("Bid Bingo", bidBingo, '#f0f0f0')
-                    +bingoSite("Blighty Bingo", blightyBingo, '#fff')
-                    +bingoSite("Give Back Bingo", giveBackBingo, '#ff2e7e')
-                    +bingoSite("Lovehearts Bingo", loveheartsBingo, '#fef2cd')
-                    +bingoSite("Dabber Bingo", dabberBingo, '#fff')
+                    +bingoSite("Good Day Bingo", goodDayBingo, '#246bb2', '')
+                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff', '')
+                    +bingoSite("Bid Bingo", bidBingo, '#f0f0f0', '')
+                    +bingoSite("Blighty Bingo", blightyBingo, '#fff', '')
+                    +bingoSite("Give Back Bingo", giveBackBingo, '#ff2e7e', '')
+                    +bingoSite("Lovehearts Bingo", loveheartsBingo, '#fef2cd', '')
+                    +bingoSite("Dabber Bingo", dabberBingo, '#fff', '')
 
             .c1.p-3
                 h2 Player favourites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff')
-                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff')
-                    +bingoSite("Sky Bingo", skyBingo, '#5e2caa')
-                    +bingoSite("Wink Bingo", winkBingo, '#4fc5fc')
-                    +bingoSite("Mecca Bingo", meccaBingo, '#7f3e8e')
-                    +bingoSite("Heart Bingo", heartBingo, '#e91c3a')
-                    +bingoSite("Kitty Bingo", kittyBingo, '#0398ce')
+                    +bingoSite("Fabulous Bingo", fabulousBingo, '#fff', '')
+                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff', '')
+                    +bingoSite("Sky Bingo", skyBingo, '#5e2caa', '')
+                    +bingoSite("Wink Bingo", winkBingo, '#4fc5fc', '')
+                    +bingoSite("Mecca Bingo", meccaBingo, '#7f3e8e', '')
+                    +bingoSite("Heart Bingo", heartBingo, '#e91c3a', '')
+                    +bingoSite("Kitty Bingo", kittyBingo, '#0398ce', '')
 
             .c1.p-3
                 h2 £5 Deposit Sites
                 hr.title-underline
                 ul.d-flex.flex-column.list-unstyled
-                    +bingoSite("Glitter Bingo", glitterBingo, '#5d6db6')
-                    +bingoSite("Jackpot Liner", '', 'test')
-                    +bingoSite("Girly Bingo", girlyBingo, '#d56da6')
-                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff')
-                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff')
-                    +bingoSite("BingoStars Bingo", bingostarsBingo, '#260a38')
-                    +bingoSite("Plush Bingo", plushBingo, '#0a0400')
+                    +bingoSite("Glitter Bingo", glitterBingo, '#5d6db6', '')
+                    +bingoSite("Jackpot Liner", '', 'test', '')
+                    +bingoSite("Girly Bingo", girlyBingo, '#d56da6', '')
+                    +bingoSite("Rewind Bingo", rewindBingo, '#00d0ff', '')
+                    +bingoSite("Costa Bingo", costaBingo, '#00d0ff', '')
+                    +bingoSite("BingoStars Bingo", bingostarsBingo, '#260a38', '')
+                    +bingoSite("Plush Bingo", plushBingo, '#0a0400', '')
 
 
     .about-us.py-5

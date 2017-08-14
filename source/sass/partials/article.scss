@@ -18,3 +18,22 @@
     color: $primary;
   }
 }
+
+.offer-summary .content-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.content-links {
+  margin-top: -3rem;
+  background: darken($brand, 20%);
+  width: 100%;
+  padding-left: calc(5% + 15px);
+  padding-right: calc(5% + 15px);
+}
+
+@include media-breakpoint-down(sm) {
+  .content-links a {
+    font-size: 0.9rem;
+  }
+}

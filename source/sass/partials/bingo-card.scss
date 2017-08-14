@@ -84,6 +84,7 @@ $padding: 1rem;
 
 .offerCopy, .iconList {
   color: white;
+  text-align: center;
 }
 
 
@@ -107,9 +108,11 @@ $padding: 1rem;
   background: darken($colorBg, 5%);
   .offer {
     background: darken($colorBg, 5%);
+    flex: 1.4;
   }
   .ctaSection {
     background: desaturate($colorBg, 20%);
+    flex: 1;
   }
 }
 

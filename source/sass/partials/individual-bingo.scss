@@ -31,7 +31,7 @@
 
 .bingo-summary {
   .offer-table {
-    margin-bottom: 0;
+    margin-bottom: -100px;
   }
 }
 
@@ -68,8 +68,8 @@
 
 @include media-breakpoint-up(lg) {
   .bingo-descrip {
-    margin-top: -380px;
-    margin-bottom: 50px;
+    //margin-top: -380px;
+    //margin-bottom: 50px;
 
   }
 
