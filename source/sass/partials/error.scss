@@ -1,0 +1,65 @@
+.errors {
+  color: $brand;
+
+  .c1 {
+    margin-bottom: -6px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  &__svg {
+    height: 250px;
+    margin: auto;
+    display: block;
+
+    text {
+      font-family: $font;
+    }
+  }
+
+  &__posts {
+    background: lighten($primary, 42%);
+    border-top: 10px solid $primary;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .errors {
+    .c2 {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .errors {
+
+    .c1 {
+      margin-bottom: 0;
+    }
+
+    &__svg {
+      height: 400px;
+    }
+
+    &__posts {
+      width: 80%;
+      display: block;
+      margin: auto;
+
+    }
+  }
+}

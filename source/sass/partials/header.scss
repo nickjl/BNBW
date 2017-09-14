@@ -29,9 +29,18 @@
   color: $primary;
 }
 
-ul ul .nav-link:hover, ul ul .nav-link:focus {
-  background: #fff;
+ul li ul li:hover a.nav-link, ul li ul li ul li:hover a.nav-link {
+  color: $primary;
 }
+
+ul li ul li ul li a.nav-link {
+  color: #fff !important;
+}
+
+ul li ul li ul li:hover a.nav-link {
+    color: $primary !important;
+}
+
 
 
 .dropdown-menu {
