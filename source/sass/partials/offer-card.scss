@@ -1,7 +1,7 @@
 .offer-card {
   color: $txt2;
 
-  img {
+  &__img {
     border-radius: 100%;
     max-height: 100px;
     background: $brand;
@@ -22,6 +22,7 @@
     }
   }
 
+
   &__strip {
     color: #ffffff;
     text-align: center;
@@ -38,6 +39,15 @@
     color: #ffffff;
     text-decoration: none;
   }
+
+  &__snippet {
+    flex: 1; //TODO
+  }
+
+  &__top {
+    height: 100px;
+  }
+
 
   &__strip:after {
     bottom: 100%;
@@ -62,6 +72,10 @@
     height: 35px;
     stroke: #ffffff;
   }
+}
+
+.offer-link, .offer-link:hover {
+  text-decoration: none;
 }
 
 

@@ -7,7 +7,7 @@
   color: #ffffff;
 
   &__logo {
-    height: 80px;
+    height: 70px;
   }
 
   &__button {
@@ -28,6 +28,11 @@
 .nav-link:hover, .nav-link:focus {
   color: $primary;
 }
+
+ul ul .nav-link:hover, ul ul .nav-link:focus {
+  background: #fff;
+}
+
 
 .dropdown-menu {
   background: darken($brand, 20%);
@@ -62,3 +67,7 @@
   }
 
 }
+
+
+
+

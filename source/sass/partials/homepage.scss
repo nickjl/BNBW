@@ -58,8 +58,8 @@ input[type="checkbox"]:checked + label span {
 .offer-table {
   border-top: 10px solid $primary;
   background: lighten($primary, 42%);
-  margin-bottom: -110px;
-  z-index: 99999;
+  //margin-bottom: -110px;
+  z-index: 900;
   position: relative;
 
   thead th {
@@ -70,12 +70,19 @@ input[type="checkbox"]:checked + label span {
 
   td {
     border-top: 0;
-    padding: 0 10px;
+    padding: 0 10px 1rem 10px;
     color: $brand;
+    text-decoration: none;
   }
 
-  td:first-child {
+  td a, td a:hover, td a:focus {
+    color: $brand;
+    text-decoration: none;
+  }
+
+  td:first-child, td:first-child a {
     color: desaturate(darken($brand, 15%), 10%);
+    width: 35%;
   }
 
   p {
@@ -109,6 +116,11 @@ input[type="checkbox"]:checked + label span {
     text-align: center;
     font-size: 0.9rem;
 
+    a, a:hover, a:focus {
+      color: $primary;
+      text-decoration: none;
+    }
+
     svg {
       height: 80px;
       fill: $primary;
@@ -119,6 +131,7 @@ input[type="checkbox"]:checked + label span {
 a, a:hover, a:focus {
   color: $brand;
   text-decoration: underline;
+  outline: none;
 }
 
 a.play-now {

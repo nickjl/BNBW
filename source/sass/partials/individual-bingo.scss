@@ -20,6 +20,11 @@
 
 }
 
+.bingo-screenshot {
+  max-width: 90%;
+  display: block;
+  margin: auto;
+}
 
 .bingo-img {
   max-width: 120px;
@@ -29,11 +34,7 @@
 
 }
 
-.bingo-summary {
-  .offer-table {
-    margin-bottom: -100px;
-  }
-}
+
 
 .bingo-details {
   h2 {
@@ -67,10 +68,10 @@
 
 
 @include media-breakpoint-up(lg) {
-  .bingo-descrip {
-    //margin-top: -380px;
-    //margin-bottom: 50px;
-
+  .bingo-summary {
+    .offer-table {
+      margin-bottom: -100px;
+    }
   }
 
   .related-bingo {

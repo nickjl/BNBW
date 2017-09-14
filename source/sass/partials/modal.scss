@@ -1,0 +1,56 @@
+.modal-content {
+  background: darken($brand, 20%);
+  color: white;
+
+  .close {
+    color: white;
+  }
+
+
+  .submit {
+    background: $primary;
+    color: white;
+    padding: 7px 15px;
+    border: 0;
+  }
+}
+
+.wpcf7-submit {
+  background: $primary;
+  color: white;
+  padding: 7px 15px;
+  border: 0;
+
+}
+
+.bingo-site, .offer-table, .offer-card, .cardCasino {
+  .bingo-site__rating, .post-ratings {
+    display: block;
+    line-height: 0.2rem;
+    font-size: 0;
+  }
+}
+
+//.bingo-site, .offer-table {
+//  .bingo-site__rating, .post-ratings {
+//    line-height: 0.2rem;
+//  }
+//}
+
+.commentlist {
+  li {
+    background: none;
+    padding-left: 0;
+    color: black;
+  }
+}
+
+.avatar {
+  display: none;
+}
+
+
+.comment-author {
+  font-size: 1.5rem;
+}
+

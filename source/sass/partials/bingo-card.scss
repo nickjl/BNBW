@@ -23,9 +23,20 @@ $padding: 1rem;
     color: #ffffff;
   }
 
+  a.btn-play {
+    color: $brand;
+    text-decoration: none;
+  }
+
   .offer a, .copy a:first-of-type {
     text-decoration: none;
   }
+}
+
+.filter-results .cardCasino a.btn-play {
+  color: white;
+  text-decoration: none;
+
 }
 
 .btn-play {
@@ -84,6 +95,9 @@ $padding: 1rem;
 
 .offerCopy, .iconList {
   color: white;
+}
+
+.iconList {
   text-align: center;
 }
 

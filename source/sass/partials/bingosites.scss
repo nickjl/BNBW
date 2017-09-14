@@ -3,11 +3,41 @@
 }
 
 
+.filtr-search {
+  background: transparent;
+  border: 2px solid $primary;
+  color: $primary;
+}
+
+.filtr-search:focus {
+  outline: none;
+}
+
+
 .filter-box {
   background: darken($brand, 20%);
   border-top: 10px solid $primary;
   font-weight: lighter;
   padding: 2rem 2rem 5rem 2rem;
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $primary;
+    font-style: italic;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $primary;
+    opacity:  1;
+    font-style: italic;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $primary;
+    opacity:  1;
+    font-style: italic;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    $primary;
+    font-style: italic;
+  }
 
 
   label {

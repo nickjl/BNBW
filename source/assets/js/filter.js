@@ -1,26 +1,26 @@
-$('.show-filter').click(function() {
-    $('.filter-box').show();
-    $('.all-results').hide();
-    $('.intro').hide();
-    $('footer').hide();
-    $('nav').hide();
+jQuery('.show-filter').click(function() {
+    jQuery('.filter-box').show();
+    jQuery('.all-results').hide();
+    jQuery('.intro').hide();
+    jQuery('footer').hide();
+    jQuery('nav').hide();
 
 });
 
 
-$('.hide-filter').click(function() {
-    $('.filter-box').hide();
-    $('.all-results').show();
-    $('.intro').show();
-    $('footer').show();
-    $('nav').show();
+jQuery('.hide-filter').click(function() {
+    jQuery('.filter-box').hide();
+    jQuery('.all-results').show();
+    jQuery('.intro').show();
+    jQuery('footer').show();
+    jQuery('nav').show();
 
 });
 
 
-$('.viewMoreOffers').click(function() {
-    $('.hidden-offer').slideToggle('slow');
-    $(this).text( $(this).text() == 'show less' ? "show more" : "show less");
+jQuery('.viewMoreOffers').click(function() {
+    jQuery('.hidden-offer').slideToggle('slow');
+    jQuery(this).text( jQuery(this).text() == 'show less' ? "show more" : "show less");
 
 });
 
