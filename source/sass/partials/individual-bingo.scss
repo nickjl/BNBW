@@ -70,9 +70,41 @@
     margin-left: 0;
   }
 }
+.navbar {
+  z-index: 700;
+}
 
+.offer-table {
+  z-index: 499;
+}
 
+.bingo-site {
+  width: 100%;
+  top: 90px;
+  background:rgba(white, .9);
+  z-index: 500;
+}
+//.bingo_description, .bingo_table {
+//  width: 50%;
+//}
+//
+//.bingo_description, .bingo_table {
+//  width: 100%;
+//}
 
+.bingo_table {
+  min-width: 50%
+}
+
+.bingo_description {
+
+  .shortDescription {
+    border-top: none;
+  }
+  .full_article {
+    color: $txt2;
+  }
+}
 
 
 
