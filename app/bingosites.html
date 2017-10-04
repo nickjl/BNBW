@@ -1519,6 +1519,19 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+          $(window).bind("resize", function () {
+              console.log($(this).width())
+              if ($(this).width() < 768) {
+                  $('.bingo-site').removeClass('sticky-top')
+              } else {
+                  $('.bingo-site').addClass('sticky-top')
+              }
+          }).trigger('resize');
+      })
+      
+    </script>
     <script src="assets/js/bnbs.min.js"></script>
   </body>
 </html>

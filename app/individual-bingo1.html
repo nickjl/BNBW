@@ -834,7 +834,7 @@
             <div class="c1 d-flex flex-column flex-sm-row">
               <div class="d-none d-sm-block"><img class="bingo-img" src="assets/images/logo/lovehearts-bingo.png"></div>
               <div class="d-flex flex-column align-items-center align-items-md-start justify-content-center p-2">
-                <h1 class="bingo-site__title">LoveHearts Bingo</h1><span class="bingo-site__rating"><img class="post-ratings-image" src="assets/images/stars-rating/rating_on.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_on.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_half.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_off.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_off.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"> (<em class="invisible"><strong>3</strong> votes, average: <strong>2.33</strong> out of 5, <strong>rated</strong></em>)</span>
+                <h1 class="bingo-site__title">LoveHearts Bingo</h1><span class="bingo-site__rating"><img class="post-ratings-image" src="assets/images/stars-rating/rating_on.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_on.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_half.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_off.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5"><img class="post-ratings-image" src="assets/images/stars-rating/rating_off.png" alt="3 votes, average: 2.33 out of 5" title="3 votes, average: 2.33 out of 5">(<em class="invisible"><strong>3</strong> votes, average: <strong>2.33</strong> out of 5, <strong>rated</strong></em>)</span>
               </div>
             </div>
             <div class="c2 d-flex flex-column justify-content-center justify-content-md-end">
@@ -847,7 +847,7 @@
           </div>
         </section>
         <section class="col bingo-summary px-0">
-          <div class="d-flex flex-md-row flex-column">
+          <div class="d-flex flex-md-row flex-column equal-column">
             <section class="bingo_description">
               <div class="shortDescription p-4">
                 <h2>LoveHearts Bingo Review</h2>
@@ -925,7 +925,8 @@
                     </tr>
                     <tr>
                       <td>UK License Holder</td>
-                      <td>888 UK Limited</td>
+                      <td>
+                         Spin the Wheel of Slots after first and subsequent deposits of £10 or more or completing a barometer task, to be awarded 5 - 500 bingo tickets for the Daily Fifty game or 5 - 500 free spins on Temple of Isis, Shamans Dream or Fluffy Favourites . Spins need not be taken immediately - up to 5 can be banked for later use (but are lost if you make a withdrawal). The Wheel cannot be spun if there is more than £100 in your player balance. Spin the Wheel of Slots after first and subsequent deposits of £10 or more or completing a barometer task, to be awarded 5 - 500 bingo tickets for the Daily Fifty game or 5 - 500 free spins on Temple of Isis, Shamans Dream or Fluffy Favourites . Spins need not be taken immediately - up to 5 can be banked for later use (but are lost if you make a withdrawal). The Wheel cannot be spun if there is more than £100 in your player balance. Spin the Wheel of Slots after first and subsequent deposits of £10 or more or completing a barometer task, to be awarded 5 - 500 bingo tickets for the Daily Fifty game or 5 - 500 free spins on Temple of Isis, Shamans Dream or Fluffy Favourites . Spins need not be taken immediately - up to 5 can be banked for later use (but are lost if you make a withdrawal). The Wheel cannot be spun if there is more than £100 in your player balance. Spin the Wheel of Slots after first and subsequent deposits of £10 or more or completing a barometer task, to be awarded 5 - 500 bingo tickets for the Daily Fifty game or 5 - 500 free spins on Temple of Isis, Shamans Dream or Fluffy Favourites . Spins need not be taken immediately - up to 5 can be banked for later use (but are lost if you make a withdrawal). The Wheel cannot be spun if there is more than £100 in your player balance.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1163,6 +1164,19 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+          $(window).bind("resize", function () {
+              console.log($(this).width())
+              if ($(this).width() < 768) {
+                  $('.bingo-site').removeClass('sticky-top')
+              } else {
+                  $('.bingo-site').addClass('sticky-top')
+              }
+          }).trigger('resize');
+      })
+      
+    </script>
     <script src="assets/js/bnbs.min.js"></script>
   </body>
 </html>

@@ -80,7 +80,7 @@
 
 .bingo-site {
   width: 100%;
-  top: 85px;
+  top: 0px;
   background:rgba(white, .9);
   z-index: 500;
 }
@@ -120,6 +120,11 @@
   }
 }
 
+.equal-column {
+  section {
+    flex: 1;
+  }
+}
 
 
 
