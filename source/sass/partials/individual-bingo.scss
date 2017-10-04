@@ -80,10 +80,24 @@
 
 .bingo-site {
   width: 100%;
-  top: 90px;
+  top: 85px;
   background:rgba(white, .9);
   z-index: 500;
 }
+
+
+@include media-breakpoint-up(lg) { 
+  .bingo-site {
+    top: 90px;
+  }
+ }
+// @include media-breakpoint-up(xs) { ... } 
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+
+
 //.bingo_description, .bingo_table {
 //  width: 50%;
 //}

@@ -5,7 +5,21 @@ mixin bingoCard (image, title, hidden)
                 img.mx-3(src="assets/images/logo/" + image + ".png", style="background-color: ")
             .d-flex.flex-column.c2.px-md-2
                 h2= title
-                span 3.5/5
+                span.bingo-site__rating
+                    img.post-ratings-image(src='assets/images/stars-rating/rating_on.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+                    img.post-ratings-image(src='assets/images/stars-rating/rating_on.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+                    img.post-ratings-image(src='assets/images/stars-rating/rating_half.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+                    img.post-ratings-image(src='assets/images/stars-rating/rating_off.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+                    img.post-ratings-image(src='assets/images/stars-rating/rating_off.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+                    |  (
+                    em.invisible
+                        strong 3
+                        |  votes, average: 
+                        strong 2.33
+                        |  out of 5, 
+                        strong rated
+                    | )
+
                 a.font-italic(href="") Nektan
         .d-flex.c2.ml-auto.mb-3.px-2
             p Ghost Bingo is a Cozy bingo site on the Best Bingo Network, with all the usual network promotions and huge bonuses

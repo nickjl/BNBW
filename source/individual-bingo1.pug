@@ -8,11 +8,24 @@ block content
 		section.col.pb-3.bingo-site.sticky-top
 			.d-flex.flex-column.flex-md-row.g1-md.content-container
 				.c1.d-flex.flex-column.flex-sm-row
-					//div
+					div.d-none.d-sm-block
 						img.bingo-img(src="assets/images/logo/lovehearts-bingo.png")
 					.d-flex.flex-column.align-items-center.align-items-md-start.justify-content-center.p-2
 						h1.bingo-site__title LoveHearts Bingo
-						span.bingo-site__rating 3.5/5 *****
+						span.bingo-site__rating
+							img.post-ratings-image(src='assets/images/stars-rating/rating_on.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+							img.post-ratings-image(src='assets/images/stars-rating/rating_on.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+							img.post-ratings-image(src='assets/images/stars-rating/rating_half.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+							img.post-ratings-image(src='assets/images/stars-rating/rating_off.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+							img.post-ratings-image(src='assets/images/stars-rating/rating_off.png', alt='3 votes, average: 2.33 out of 5', title='3 votes, average: 2.33 out of 5')
+							|  (
+							em.invisible
+								strong 3
+								|  votes, average: 
+								strong 2.33
+								|  out of 5, 
+								strong rated
+							| )
 				.c2.d-flex.flex-column.justify-content-center.justify-content-md-end
 					.d-flex.flex-row.justify-content-center.align-items-center.justify-content-md-end
 						a(href="") Write a review
