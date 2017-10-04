@@ -188,6 +188,9 @@ li {
   display: inline-block;
 }
 
+.date {
+    color: $txt1;
+}
 
 
 @include media-breakpoint-up(md) {

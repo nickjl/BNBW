@@ -44,6 +44,9 @@
 .shortDescription {
   border-top: 10px solid $primary;
   background: darken($brand, 20%);
+  a {
+    color: $primary;
+  }
 }
 
 .bingo-details {
