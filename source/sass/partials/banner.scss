@@ -1,0 +1,21 @@
+.banner {
+	background: lighten($primary, 40%);
+	.banner--caption {
+		font-family: $font;
+		color: $primary;
+		font-size: 1rem;
+	}
+	.banner--art {
+
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.banner {
+		.banner--caption {
+			font-size: 1.5rem;
+		}
+		.banner--art {
+		}
+	}
+}

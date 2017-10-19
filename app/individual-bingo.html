@@ -823,7 +823,7 @@
           <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarSlots" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Slots</a>
             <div class="dropdown-menu" aria-labelledby="navbarSlots"><a class="dropdown-item" href="#">No deposit slots</a></div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="individual-bingo.html">Compare Bingo</a></li>
+          <li class="nav-item"><a class="nav-link" href="individual-bingo1.html">Compare Bingo</a></li>
         </ul>
       </div>
     </nav>
@@ -1216,14 +1216,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
       $(function () {
-          $(window).bind("resize", function () {
-              console.log($(this).width())
-              if ($(this).width() < 768) {
-                  $('.bingo-site').removeClass('sticky-top')
-              } else {
-                  $('.bingo-site').addClass('sticky-top')
-              }
-          }).trigger('resize');
+      	$(window).bind("resize", function () {
+      		console.log($(this).width())
+      		if ($(this).width() < 768) {
+      			$('.bingo-site').removeClass('sticky-top')
+      		} else {
+      			$('.bingo-site').addClass('sticky-top')
+      		}
+      	}).trigger('resize');
       })
       
     </script>

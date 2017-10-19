@@ -73,9 +73,7 @@
     margin-left: 0;
   }
 }
-.navbar {
-  z-index: 700;
-}
+
 
 .offer-table {
   z-index: 499;
@@ -92,6 +90,11 @@
 @include media-breakpoint-up(lg) { 
   .bingo-site {
     top: 90px;
+  }
+  @supports (-ms-ime-align:auto) {
+    .bingo-site {
+      top: 0px;
+    }
   }
  }
 // @include media-breakpoint-up(xs) { ... } 
