@@ -1,31 +1,45 @@
 include includes/mixins/banner
+- var amp = true
 block data
-	-var template = "default"
+	- var template = "default"
+	
 doctype
-html
-	head
-		block meta
-			//- Required meta tags
-			meta(charset='utf-8')
-			meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+mixin html(amp)
+	if amp
+		html(⚡)
+			block
+	else
+		html
+			block
 
-		block css
++html(amp)
+	block meta
+		//- Required meta tags
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1')
+	
+	block css
+		if amp
+			style(amp-boilerplate)
+				include ../assets/css/app.min.css
+		else
 			link(href='https://fonts.googleapis.com/css?family=Arvo', rel='stylesheet', type='text/css')
 			link(rel='stylesheet', href='assets/css/bnbs.min.css')
 			//-link(rel='stylesheet', href='css/app.css')
 
 
-		block head-scripts
+	block head-scripts
+		if !amp
 			script(type='text/javascript', src='//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js', async='')
 
 
-		block links
-			//- link(rel='profile', href='')
-			//-link(rel='shortcut icon', href='http://www.monacoriches.com/favicon.png', type='image/x-icon')
-			//-link(rel='canonical', href='http://www.monacoriches.com/')
+	block links
+		//- link(rel='profile', href='')
+		//-link(rel='shortcut icon', href='http://www.monacoriches.com/favicon.png', type='image/x-icon')
+		//-link(rel='canonical', href='http://www.monacoriches.com/')
 
-	//block vars
 	body
+		
 		block header
 			include includes/svg/svg
 			include includes/header/header
